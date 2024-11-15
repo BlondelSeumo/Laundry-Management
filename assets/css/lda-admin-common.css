@@ -1,0 +1,1613 @@
+/*
+Laundry - Admin style Common
+*/
+
+body {
+    font-family: 'Open Sans';
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li.active a,
+#lda #lda-top-nav .navbar .admin-hover-color>li>a:hover,
+#lda .ld-notification-main .notification-header #ld-close-notifications:hover {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+}
+
+#lda .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+.pulse {
+    -webkit-animation: pulse 1.5s cubic-bezier(.86, 0, .07, 1);
+    -moz-animation: pulse 1.5s cubic-bezier(.86, 0, .07, 1);
+    -o-animation: pulse 1.5s cubic-bezier(.86, 0, .07, 1);
+    animation: pulse 1.5s cubic-bezier(.86, 0, .07, 1);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#lda .form-control {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#lda h1,
+#lda h2,
+#lda h3,
+#lda h4,
+#lda h5,
+#lda h6 {
+    font-family: inherit;
+    color: #3c4c5c;
+}
+
+#lda .ld-right-header {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+
+/* Columns float left no space */
+
+.lda-col1,
+.lda-col1-1,
+.lda-col2,
+.lda-col2-1,
+.lda-col3,
+.lda-col35,
+.lda-col4,
+.lda-col5,
+.lda-col55,
+.lda-col6,
+.lda-col61,
+.lda-col7,
+.lda-col75,
+.lda-col8,
+.lda-col9,
+.lda-col10,
+.lda-col11,
+.lda-col115,
+.lda-col12,
+.lda-one-half {
+    float: left;
+    position: relative;
+}
+
+
+/* column with last */
+
+.lda-col1.last,
+.lda-col1-1.last,
+.lda-col2.last,
+.lda-col2-1.last,
+.lda-col3.last,
+.lda-col35.last,
+.lda-col4.last,
+.lda-col5.last,
+.lda-col55.last,
+.lda-col6.last,
+.lda-col7.last,
+.lda-col75.last,
+.lda-col8.last,
+.lda-col9.last,
+.lda-col10.last,
+.lda-col11.last,
+.lda-col115.last,
+.lda-col12 {
+    margin: 0;
+    outline: none;
+}
+
+
+/* column float right */
+
+.lda-col1.float-right,
+.lda-col1-1.float-right,
+.lda-col2.float-right,
+.lda-col2-1.float-right,
+.lda-col3.float-right,
+.lda-col35.float-right,
+.lda-col4.float-right,
+.lda-col5.float-right,
+.lda-col55.float-right,
+.lda-col6.float-right,
+.lda-col7.float-right,
+.lda-col75.float-right,
+.lda-col8.float-right,
+.lda-col9.float-right,
+.lda-col10.float-right,
+.lda-col11.float-right,
+.lda-col115.float-right,
+.lda-col12.float-right,
+.lda-view-link.float-right {
+    float: right;
+    outline: none;
+}
+
+
+/* column with no margin no padding */
+
+.lda-col1 {
+    width: 8.33%;
+}
+
+.lda-col1-1 {
+    width: 9.33%;
+}
+
+.lda-col2 {
+    width: 16.66%;
+}
+
+.lda-col2-1 {
+    width: 17.66%;
+}
+
+.lda-col3 {
+    width: 25%;
+}
+
+.lda-col35 {
+    width: 31%;
+}
+
+.lda-col4 {
+    width: 33.33%;
+}
+
+.lda-col5 {
+    width: 41.66%;
+}
+
+.lda-col55 {
+    width: 46%;
+}
+
+.lda-col6 {
+    width: 48.5% !important;
+}
+
+.lda-col61 {
+    width: 48.5%;
+}
+
+.lda-col7 {
+    width: 58.33%;
+}
+
+.lda-col75 {
+    width: 64.33%;
+}
+
+.lda-col8 {
+    width: 66.66%;
+}
+
+.lda-col9 {
+    width: 75%;
+}
+
+.lda-col10 {
+    width: 83.33%;
+}
+
+.lda-col11 {
+    width: 90.66% !important;
+}
+
+.lda-col115 {
+    width: 95%;
+}
+
+.lda-col12 {
+    width: 100%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .lda-col1,
+    .lda-col1-1,
+    .lda-col2,
+    .lda-col2-1,
+    .lda-col3,
+    .lda-col35,
+    .lda-col4,
+    .lda-col5,
+    .lda-col55,
+    .lda-col6,
+    .lda-col7,
+    .lda-col75,
+    .lda-col8,
+    .lda-col9,
+    .lda-col10,
+    .lda-col11,
+    .lda-col115,
+    .lda-col12 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* to hide or disable text input and button border on active and selected in chrome */
+
+*:focus {
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
+#lda textarea:focus,
+#lda input:focus {
+    outline: 0;
+}
+
+#lda textarea {
+    resize: vertical;
+    min-height: 60px;
+    overflow: auto;
+}
+
+
+/* ipad scroll bar 
+	*{
+		-webkit-overflow-scrolling: auto;
+		-moz-overflow-scrolling: auto;
+		-o-overflow-scrolling: auto;
+		overflow-scrolling: auto;
+	}*/
+
+
+/* ipad scroll bar */
+
+* {
+    -webkit-overflow-scrolling: scroll;
+    -moz-overflow-scrolling: scroll;
+    -o-overflow-scrolling: scroll;
+    overflow-scrolling: scroll;
+}
+
+#lda input:focus:-moz-focus-inner {
+    border: 0;
+}
+
+#lda input[type="button"] {
+    outline: none;
+}
+
+#lda input[type="button"]::-moz-focus-inner {
+    border: 0;
+}
+
+#lda a:active,
+#lda a:focus,
+#lda input[type="button"]:active,
+#lda input[type="button"]:focus,
+#lda input[type="text"]:active,
+#lda input[type="text"]:focus,
+#lda select:active,
+#lda select:focus,
+#lda textarea:active,
+#lda textarea:focus,
+#lda a:hover,
+#lda a:active,
+#lda a:focus,
+#lda a,
+#lda .btn,
+#lda .dropdown-toggle {
+    -webkit-backface-visibility: hidden;
+    outline: 0 !important;
+}
+
+#lda a.btn.ld-small-br-btn {
+    padding: 3px 6px !important;
+    font-size: 12px !important;
+    -moz-border-radius: 15px !important;
+    -webkit-border-radius: 15px !important;
+    -o-border-radius: 15px !important;
+    -ms-border-radius: 15px !important;
+    border-radius: 15px !important;
+}
+
+#lda .hide-div {
+    display: none;
+}
+
+#lda hr#hr {
+    background: #f6f6f6;
+    /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzdmN2Y3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f6f6f6), color-stop(50%, #7f7f7f), color-stop(100%, #ffffff));
+    /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(left, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(left, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(left, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* IE10 preview */
+    background: linear-gradient(to right, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#ffffff', GradientType=1);
+    /* IE6-8 */
+    border: none;
+    height: 1px;
+    margin: 5px 0px 15px;
+    width: 100%;
+    clear: both;
+}
+
+
+/* vertical line */
+
+#lda hr#vr {
+    background: #f6f6f6;
+    /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzdmN2Y3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(50%, #7f7f7f), color-stop(100%, #ffffff));
+    /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(top, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(top, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(top, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* IE10 preview */
+    background: linear-gradient(to bottom, #f6f6f6 0%, #7f7f7f 50%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#ffffff', GradientType=0);
+    /* IE6-8 */
+    border: 0 !important;
+    height: 90%;
+    width: 1px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#lda i.fa {
+    margin-right: 5px;
+}
+
+#lda .ld-footer-popup-btn .fa-2x {
+    font-size: 1.3em;
+}
+
+#lda .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#lda i.fa-trash,
+#lda i.fa-ban,
+#lda i.fa-times,
+#lda i.fa-user-plus,
+#lda i.fa-pencil-square-o,
+#lda i.fa-clone,
+#lda #lda-clean-services-panel i.fa-money,
+#lda #lda-clean-services-panel i.fa-thumbs-up {
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+#lda .mr-1 {
+    margin-right: 1px !important;
+}
+
+#lda .mt-2 {
+    margin-top: 2px;
+}
+
+#lda .mt-5 {
+    margin-top: 5px;
+    float: left;
+}
+
+#lda .mb-5 {
+    margin-bottom: 5px;
+    float: left;
+}
+
+#lda .mr-t5 {
+    margin-top: 5px;
+}
+
+#lda .mr-b5 {
+    margin-bottom: 5px;
+}
+
+#lda .mb-6 {
+    margin-bottom: 6px;
+}
+
+#lda .mt-15 {
+    margin-top: 15px;
+}
+
+#lda .mt-20 {
+    margin-top: 20px;
+}
+
+#lda .mt-30 {
+    margin-top: 30px;
+}
+
+#lda .mb-20 {
+    margin-bottom: 20px;
+}
+
+#lda .mb-30 {
+    margin-bottom: 30px;
+}
+
+#lda .mb-40 {
+    margin-bottom: 40px;
+}
+
+#lda .br-2 {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#lda .text-upper {
+    text-transform: uppercase;
+}
+
+#lda .mr-5 {
+    margin-right: 5px;
+}
+
+#lda .mr-10 {
+    margin-right: 10px;
+}
+
+#lda .mr-15 {
+    margin-right: 15px;
+}
+
+#lda .m-15-50 {
+    margin: 15px 50px !important;
+}
+
+#lda .mb-15 {
+    margin-bottom: 15px !important;
+}
+
+#lda .mr-20 {
+    margin-right: 20px;
+}
+
+#lda .ml-10 {
+    margin-left: 10px;
+}
+
+#lda .ml-15 {
+    margin-left: 15px;
+}
+
+#lda .ml--15 {
+    margin-left: -15px;
+}
+
+#lda .pall-15 {
+    padding: 15px !important;
+}
+
+#lda .pt-50 {
+    padding-top: 50px !important;
+}
+
+#lda .pt-15 {
+    padding-top: 15px;
+}
+
+#lda .pr-5 {
+    padding-right: 5px;
+}
+
+#lda .pr-70 {
+    padding-right: 70px;
+}
+
+#lda .ptb-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#lda .pr-10 {
+    padding-right: 10px;
+}
+
+#lda .padding-15 {
+    padding: 15px !important;
+}
+
+#lda .pl-10 {
+    padding-left: 10px;
+}
+
+#lda .pl-15 {
+    padding-left: 15px;
+}
+
+#lda .pl-30 {
+    padding-left: 30px;
+}
+
+#lda .pr-15 {
+    padding-right: 15px;
+}
+
+#lda .ml-30 {
+    margin-left: 30px;
+}
+
+#lda .ld-btn-width {
+    min-width: 100px;
+}
+
+#lda .ld-new-input {
+    width: 90% !important;
+    float: left !important;
+}
+
+#lda .nb {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#lda .br-2 {
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -o-border-radius: 2px !important;
+    -ms-border-radius: 2px !important;
+    border-radius: 2px !important;
+}
+
+#lda .br-3 {
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -o-border-radius: 3px !important;
+    -ms-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+
+#lda .br-5 {
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+
+#lda .br-10 {
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    border-radius: 10px !important;
+}
+
+#lda ol.lda-ol-steps {
+    list-style-type: decimal;
+    line-height: 1.9;
+    padding-left: 10px;
+}
+
+#lda .cb {
+    clear: both;
+}
+
+#lda .np {
+    padding: 0px !important;
+}
+
+#lda .pb-p,
+#lda .p-10 {
+    padding: 10px !important;
+}
+
+#lda .fln-marauto {
+    margin: 0 auto;
+    float: none;
+}
+
+#lda .fln-mrat-dib {
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+}
+
+#lda .plr-10 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+#lda .nm {
+    margin: 0px !important;
+}
+
+#lda .npl {
+    padding-left: 0px;
+}
+
+#lda .npr {
+    padding-right: 0px;
+}
+
+#lda .br-100 {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+}
+
+#lda .w70 {
+    width: 70px;
+    float: left;
+}
+
+#lda .h-450 {
+    height: 440px;
+}
+
+#lda .w-300 {
+    width: 300px !important;
+}
+
+#lda .pr-t0 {
+    top: 0px !important;
+}
+
+#lda .text-left {
+    text-align: left;
+}
+
+#lda a.ld-tooltip-link {
+    color: #1E9F7B;
+    position: relative;
+    top: 7px;
+}
+
+#lda a.ld-tooltip-link i.fa-info-circle,
+#lda .form-group a.ld-tooltip-link i.fa-info-circle {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+#lda .form-group a.ld-tooltip-link {
+    color: #1E9F7B;
+    position: relative;
+    top: 0px;
+}
+
+#lda label.error {
+    color: #F00;
+    font-size: 12px;
+    width: 100%;
+    float: left;
+    font-weight: normal;
+    line-height: 13px;
+    display: block;
+    position: relative;
+}
+
+table.ld-common-table.form-inline .form-group label.error,
+form#staff_insert table.form-horizontal label.error {
+    position: relative !important;
+}
+
+#lda label {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+#lda .of-h {
+    overflow: hidden;
+}
+
+#lda .cur-def {
+    cursor: default;
+}
+
+#lda .ta-c {
+    text-align: center;
+}
+
+#lda .ta-r {
+    text-align: right;
+}
+
+#lda .fln {
+    float: none !important;
+}
+
+#lda .fl {
+    float: left;
+}
+
+#lda .w100 {
+    width: 100% !important;
+}
+
+
+/*#lda .form-inline .form-control{
+		width: 100% !important;
+	} */
+
+#lda #ld-settings .panel-body {
+    padding: 0;
+}
+
+#lda .wf-100 {
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+#lda .dropdown-menu>li>a {
+    padding: 8px 20px;
+}
+
+.badge {
+    border-radius: 0px !important;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+    -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+    -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+}
+
+#lda .txt-info {
+    color: #5bc0de !important;
+}
+
+#lda .bg-info {
+    background: #5bc0de !important;
+    color: #f1f1f1 !important;
+}
+
+#lda .txt-completed {
+    color: #00cc00 !important;
+}
+
+#lda .txt-success {
+    color: #5cb85c !important;
+}
+
+#lda .bg-success {
+    background: #5cb85c !important;
+    color: #f1f1f1 !important;
+}
+
+#lda .txt-danger {
+    color: #d9534f !important;
+}
+
+#lda .bg-danger {
+    background: #d9534f !important;
+    color: #f1f1f1 !important;
+}
+
+#lda .txt-warning {
+    color: #f0ad4e !important;
+}
+
+#lda .bg-warning {
+    background: #f0ad4e !important;
+    color: #f1f1f1 !important;
+}
+
+#lda .txt-primary {
+    color: #337ab7 !important;
+}
+
+#lda .bg-primary {
+    background: #337ab7 !important;
+    color: #f1f1f1 !important;
+}
+
+#lda .txt-default {
+    color: #e0e0e0 !important;
+}
+
+#lda .bg-default {
+    background: #e0e0e0 !important;
+}
+
+.bootstrap-select>.dropdown-toggle.btn-default {
+    font-weight: normal !important;
+    box-shadow: unset !important;
+}
+
+
+/* .btn-info,
+	.btn-success,
+	.btn-danger,
+	.btn-warning,
+	.btn-primary,
+	.btn-default {
+		font-weight: 400 !important;
+		-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+		-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+		-o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+		-ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.13) !important;
+	} */
+
+#lda .b-shadow {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
+    -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+}
+
+
+/**************************************/
+
+
+/****   common toggle very small  ****/
+
+#lda .ld-show-hide {
+    position: relative;
+    width: 33px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    float: left;
+    top: 0px;
+}
+
+#lda .ld-show-hide-checkbox {
+    display: none;
+}
+
+#lda .ld-show-hide-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 33px;
+    padding: 0;
+    line-height: 33px;
+    border: 1px solid #CCCCCC;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -o-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+
+#lda .ld-show-hide-label:before {
+    content: "\e604";
+    font-family: 'simple-line-icons';
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    z-index: 99;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: -webkit-transform 0.7s ease-in-out;
+    -moz-transition: -moz-transform 0.7s ease-in-out;
+    -ms-transition: -ms-transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out;
+}
+
+#lda .ld-show-hide-checkbox:checked+.ld-show-hide-label:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.dropdown-menu>li>a {
+    padding: 8px 20px !important;
+}
+
+
+/* custom checkboxs */
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list li input[type="radio"],
+#lda .ld-custom-checkbox ul.ld-checkbox-list li input[type="checkbox"] {
+    display: none !important;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list,
+#lda .ld-custom-checkbox ul.ld-checkbox-list {
+    list-style-type: none;
+    float: left;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list li,
+#lda .ld-custom-checkbox ul.ld-checkbox-list li {
+    line-height: 30px;
+    float: left;
+    width: 100%;
+    text-decoration: uppercase;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list li label,
+#lda .ld-custom-checkbox ul.ld-checkbox-list li label {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#lda ul li.service_set_session {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#lda .service-img {
+    width: 40px;
+    padding-right: 0px;
+}
+
+#lda .service-title {
+    font-size: 16px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list label span,
+#lda .ld-custom-checkbox ul.ld-checkbox-list label span {
+    background-color: #FBFBFB;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #EEA43B;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 3px;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays .ld-custom-checkbox ul.ld-checkbox-list label span {
+    float: right;
+    position: relative;
+    top: 6px;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list label span:before,
+#lda .ld-custom-checkbox ul.ld-checkbox-list label span:before {
+    content: "";
+    background: url('../images/check.png') no-repeat;
+    opacity: 0;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list input[type="radio"]:checked+label span,
+#lda .ld-custom-checkbox ul.ld-checkbox-list input[type="checkbox"]:checked+label span {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #39B1D5;
+    background: #39b1D5;
+}
+
+#lda .ld-custom-new-radio ul.ld-new-radio-list input[type="radio"]:checked+label span:before,
+#lda .ld-custom-checkbox ul.ld-checkbox-list input[type="checkbox"]:checked+label span:before {
+    content: "";
+    background: url('../images/check.png') no-repeat;
+    opacity: 1;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    background-size: 100%;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+
+
+/* custom radio css */
+
+#lda .ld-custom-radio ul.ld-radio-list li input[type="radio"] {
+    display: none !important;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list {
+    list-style-type: none;
+    float: left;
+    padding: 0px 0px 5px 5px;
+    margin: 0px;
+    width: 100%;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list li {
+    line-height: 29px;
+    float: left;
+    width: 50%;
+    text-decoration: uppercase;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list li label {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list label span {
+    background-color: #FBFBFB;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #EEA43B;
+    width: 18px;
+    height: 18px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 3px;
+}
+
+
+/*#lda .ld-custom-radio ul.ld-radio-list label span:before {
+		content: "";
+		background-color: #FBFBFB;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+		-ms-border-radius: 2px;
+		border-radius: 2px;
+		cursor: pointer;
+		display: inline-block;
+		height: 8px;
+		width: 8px;
+		z-index: 1;
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		
+	}*/
+
+#lda .ld-custom-radio ul.ld-radio-list input[type="radio"]:checked+label span {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #39B1D5;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+}
+
+
+/*
+	#lda .ld-custom-radio ul.ld-radio-list input[type="radio"]:checked + label span:before {
+		content: "";
+		background-color: #39B1D5;
+		
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		-o-border-radius: 100px;
+		-ms-border-radius: 100px;
+		border-radius: 100px;
+		cursor: pointer;
+		display: inline-block;
+		height: 8px;
+		width: 8px;
+		z-index: 1;
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		-o-transition: all .2s;
+		-ms-transition: all .2s;
+		transition: all .2s;
+	}
+	*/
+
+
+/*#lda  .table-responsive {
+		overflow-x: visible;
+	}*/
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: #E8E8E8 !important;
+    background: #5bc0de !important;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwcHgiIHN0b3AtY29sb3I9IiM1YmMwZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmFhYmQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==) !important;
+    background: -moz-linear-gradient(top, #5bc0de 0px, #2aact2 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, #5bc0de), color-stop(100%, #2aact2)) !important;
+    background: -webkit-linear-gradient(top, #5bc0de 0px, #2aact2 100%) !important;
+    background: -o-linear-gradient(top, #5bc0de 0px, #2aact2 100%) !important;
+    background: -ms-linear-gradient(top, #5bc0de 0px, #2aact2 100%) !important;
+    background: linear-gradient(to bottom, #5bc0de 0px, #2aact2 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5bc0de', endColorstr='#2aact2', GradientType=0) !important;
+    color: #fff !important;
+}
+
+
+/* images */
+
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader img.ld-clean-service-image,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader img.ld-clean-service-addons-image,
+#lda #lda-services-panel .ld-service-image-uploader img.ld-service-image,
+#lda #lda-profile .ld-admin-staff-image-uploader img.ld-admin-staff-img,
+#lda #lda-user-profile .ld-customer-image-uploader img.ld-customer-img,
+#lda #lda-staff-panel .ld-member-image-uploader img.ld-staff-image,
+#lda #lda-staff-panel .ld-clean-service-image-uploader img.ld-clean-staff-image {
+    height: 80px;
+    width: 80px;
+    float: left;
+    top: 15px;
+    vertical-align: middle;
+    line-height: 61px;
+    right: 15px;
+    cursor: default;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader label.ld-customer-img-icon-label,
+#lda #edit-customer-details .ld-customer-image-uploader label.ld-customer-img-icon-label,
+#lda #booking-details .ld-customer-image-uploader label.ld-customer-img-icon-label,
+#lda #edit-customer-details .ld-new-customer-image-uploader label.ld-new-customer-img-icon-label,
+#lda #lda-profile .ld-admin-staff-image-uploader label.ld-admin-staff-img-icon-label,
+#lda #lda-user-profile .ld-customer-image-uploader label.ld-customer-img-icon-label,
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader label.ld-clean-service-img-icon-label,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader label.ld-clean-service-addons-img-icon-label,
+#lda #lda-services-panel .ld-service-image-uploader label.ld-service-img-icon-label,
+#lda #lda-staff-panel .ld-clean-service-image-uploader label.ld-clean-staff-img-icon-label,
+#lda #company-details .ld-company-logo-uploader label.ld-company-logo-icon-label {
+    position: relative;
+    display: block;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-staff-panel .ld-clean-service-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-services-panel .ld-service-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-profile .ld-admin-staff-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-user-profile .ld-customer-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #lda-staff-panel .ld-member-image-uploader i.ld-camera-icon-common.fa-camera {
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    opacity: 0.85;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #cfcfcf;
+    top: 32px;
+    left: 16px;
+    padding: 10px;
+    font-size: 22px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#lda #company-details .ld-company-logo-uploader i.ld-camera-icon-common.fa-camera {
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    opacity: 0.85;
+    display: none;
+    cursor: pointer;
+    border: 1px solid #cfcfcf;
+    top: 55px;
+    left: 85px;
+    padding: 10px;
+    font-size: 22px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #edit-customer-details .ld-customer-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #booking-details .ld-customer-image-uploader i.ld-camera-icon-common.fa-camera,
+#lda #edit-customer-details .ld-new-customer-image-uploader i.ld-camera-icon-common.fa-camera {
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    opacity: 0.85;
+    display: none;
+    cursor: pointer;
+    border: 1px solid #cfcfcf;
+    top: 6px;
+    left: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader i.fa-plus-circle,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader i.fa-plus-circle,
+#lda #lda-services-panel .ld-service-image-uploader i.fa-plus-circle,
+#lda #lda-profile .ld-admin-staff-image-uploader i.fa-plus-circle,
+#lda #lda-user-profile .ld-customer-image-uploader i.fa-plus-circle,
+#lda #lda-staff-panel .ld-member-image-uploader i.fa-plus-circle,
+#lda #lda-staff-panel .ld-clean-service-image-uploader i.fa-plus-circle {
+    color: #419641;
+    cursor: pointer;
+    position: absolute;
+    left: -3px;
+    top: -4px;
+}
+
+#lda #company-details .ld-company-logo-uploader i.fa-plus-circle {
+    color: #419641;
+    cursor: pointer;
+    position: absolute;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader i.fa-plus-circle,
+#lda #edit-customer-details .ld-customer-image-uploader i.fa-plus-circle,
+#lda #booking-details .ld-customer-image-uploader i.fa-plus-circle,
+#lda #edit-customer-details .ld-new-customer-image-uploader i.fa-plus-circle {
+    color: #419641;
+    cursor: pointer;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    font-size: 22px;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader:hover label i.fa-camera,
+#lda #edit-customer-details .ld-customer-image-uploader:hover label i.fa-camera,
+#lda #booking-details .ld-customer-image-uploader:hover label i.fa-camera,
+#lda #edit-customer-details .ld-new-customer-image-uploader:hover label i.fa-camera,
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader:hover label i.fa-camera,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader:hover label i.fa-camera,
+#lda #lda-services-panel .ld-service-image-uploader:hover label i.fa-camera,
+#lda #lda-staff-panel .ld-member-image-uploader:hover label i.fa-camera,
+#lda #lda-profile .ld-admin-staff-image-uploader:hover label i.fa-camera,
+#lda #lda-user-profile .ld-customer-image-uploader:hover label i.fa-camera,
+#lda #company-details .ld-company-logo-uploader:hover label i.fa-camera {
+    display: block;
+}
+
+#lda .jcrop-holder {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#lda .ld-new-customer-image-popup-view .ld-image-upload-popup .modal-md,
+#lda .ld-customer-image-popup-view .ld-image-upload-popup .modal-md,
+#lda #lda-clean-services-panel .ld-image-upload-popup .modal-md,
+#lda #lda-services-panel .ld-image-upload-popup .modal-md,
+#lda #lda-staff-panel .ld-image-upload-popup .modal-md,
+#lda .ld-admin-staff-popup-view .ld-image-upload-popup .modal-md,
+#lda .ld-customer-popup-view .ld-image-upload-popup .modal-md,
+#lda .ld-salon-logo-popup-view .ld-image-upload-popup .modal-md {
+    width: 600px;
+}
+
+#lda .ld-new-customer-image-popup-view .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda .ld-customer-image-popup-view .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda #lda-clean-services-panel .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda #lda-services-panel .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda #lda-staff-panel .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda .ld-admin-staff-popup-view .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda .ld-customer-popup-view .ld-image-upload-popup .modal-md .modal-content .modal-body,
+#lda .ld-salon-logo-popup-view .ld-image-upload-popup .modal-md .modal-content .modal-body {
+    text-align: center;
+}
+
+#lda .ld-customer-image-popup-view .ld-image-upload-popup .ld-preview-img,
+#lda .ld-new-customer-image-popup-view .ld-image-upload-popup .ld-preview-img,
+#lda #lda-clean-services-panel .ld-image-upload-popup .ld-preview-img,
+#lda #lda-services-panel .ld-image-upload-popup .ld-preview-img,
+#lda #lda-staff-panel .ld-image-upload-popup .ld-preview-img,
+#lda .ld-admin-staff-popup-view .ld-image-upload-popup .ld-preview-img,
+#lda .ld-customer-popup-view .ld-image-upload-popup .ld-preview-img,
+#lda .ld-salon-logo-popup-view .ld-image-upload-popup .ld-preview-img {
+    /* max-height: 567px;
+		max-width: 567px; */
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #edit-customer-details .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #booking-details .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #edit-customer-details .ld-new-customer-image-uploader a.bt-remove-new-customer-img,
+#lda #lda-clean-services-panel .ld-clean-service-image-uploader a.bt-remove-clean-service-img,
+#lda #lda-clean-services-panel .ld-clean-service-addons-image-uploader a.bt-remove-clean-service-addons-img,
+#lda #lda-services-panel .ld-service-image-uploader a.bt-remove-service-img,
+#lda #lda-staff-panel .ld-member-image-uploader a.bt-remove-member-img,
+#lda #lda-profile .ld-admin-staff-image-uploader a.bt-remove-admin-staff-img,
+#lda #lda-user-profile .ld-customer-image-uploader a.bt-remove-customer-img {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+#lda #company-details .ld-company-logo-uploader a.bt-remove-company-logo {
+    top: -14px;
+    right: -13px;
+    position: absolute;
+}
+
+#lda #edit-booking-details-view .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #edit-customer-details .ld-customer-image-uploaders a.bt-remove-customer-img,
+#lda #booking-details .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #lda-profile .ld-admin-staff-image-uploader a.bt-remove-admin-staff-img,
+#lda #lda-user-profile .ld-customer-image-uploader a.bt-remove-customer-img,
+#lda #edit-customer-details .ld-new-customer-image-uploader a.bt-remove-new-customer-img {
+    left: 8px;
+}
+
+
+/* customer image */
+
+#lda #edit-booking-details-view img.ld-customer-img,
+#lda #edit-customer-details img.ld-customer-img,
+#lda #booking-details img.ld-customer-img,
+#lda #edit-customer-details img.ld-new-customer-img {
+    height: 50px;
+    width: 50px;
+    float: left;
+    top: 15px;
+    vertical-align: middle;
+    line-height: 40px;
+    right: 15px;
+    cursor: default;
+}
+
+
+/* salon logo */
+
+#lda .ld-company-logo-uploader {
+    width: 200px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+#lda #company-details img.ld-company-logo {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    float: left;
+    vertical-align: middle;
+    cursor: default;
+}
+
+#lda .form-inline .ld-image-upload-popup .modal-footer .form-control {
+    width: 100% !important;
+}
+
+table.ld-common-table.form-inline .form-group.input-group {
+    margin-bottom: 0px;
+}
+
+.datepicker-dropdown {
+    z-index: 9999 !important;
+}
+
+#lda table#booking-info-table,
+#lda table#staff-payments-details {
+    width: 99.7% !important;
+}
+
+#lda .gc_config_panel {
+    position: relative !important;
+    width: 100% !important;
+}
+
+#lda #lda-user-appointments .modal-content .modal-body .rating-container.rating-md.rating-animate {
+    display: table;
+    margin: 0 auto;
+}
+
+#lda #lda-user-appointments .modal-content .modal-body .rating-container .rating-stars {
+    display: inline-grid;
+}
+
+select.input-sm {
+    height: 35px !important;
+}
+
+#ld select.input-sm {
+    height: 35px;
+}
+
+.lda-addon-img-icon {
+    font-size: 20px;
+    padding: 10px 5px;
+    position: relative;
+    top: 15px;
+    left: 0px;
+    float: left;
+}
+
+.lda-addons-imagelist-dropdown {
+    margin-top: 15px;
+    float: left;
+    display: block;
+    width: 65%;
+    position: relative;
+    padding-left: 15px;
+}
+
+.lda-addon-is {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.lda-addons-list {
+    padding: 6px 10px;
+    position: relative;
+    height: 46px;
+}
+
+.lda-addons-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 3px;
+    vertical-align: middle;
+    font-size: 46px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 46px;
+}
+
+.lda-addons-name {
+    font-size: 16px;
+    display: inline-block;
+    line-height: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin: 0;
+    padding-left: 50px;
+}
+
+.lda-addon-is .lda-addons-list:after {
+    content: "\e604";
+    font-family: 'simple-line-icons';
+    position: absolute;
+    top: 31%;
+    right: 3%;
+    z-index: 99;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lda-addons-dropdown {
+    display: none;
+    background-color: #FFF;
+    border-bottom: 1px solid #e5e5e5;
+    overflow-y: auto;
+    position: absolute;
+    max-height: 300px;
+    width: 100%;
+    z-index: 9999;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    margin-top: -3px;
+    border-radius: 0 0 4px 4px;
+}
+
+.lda-addons-dropdown .lda-addons-list {
+    border-top: thin solid #E5e5e5;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list {
+    margin-bottom: 25px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.btnupdatenewtimeslots_monthly {
+    margin-left: 17rem;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details table tr td:first-child {
+    min-width: 14%;
+    width: 15%;
+}

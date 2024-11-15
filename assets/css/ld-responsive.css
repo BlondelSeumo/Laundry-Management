@@ -1,0 +1,584 @@
+/*
+Laundry : Responsive Front 
+*/
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+	
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (max-device-width : 1350px) {
+	
+}
+	
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	#ld .ld_method_tab-slider--nav ul.ld_methods_slide li.ld_method_tab-slider-trigger{
+		width:33.33%;
+	}
+	#ld .ld_method_tab-slider--nav .ld_method_tab-slider-trigger {
+		padding: 11px 10px;
+	}
+	#ld .ld-main-left.ld-sm-8{
+		padding: 0px;
+	}
+	#ld .ld-main-right.ld-sm-4{
+		padding: 0px 5px;
+	}
+	
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6 {
+		float: left;
+		width: 35%;
+	}
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 30%;
+	}
+	#ld .ld-address-area-main .ld-area-type .area-header{
+		width: 30%;
+	}
+	
+	
+	#ld .ld-sm-6,
+	#ld .ld-form-row{
+		padding: 0px 5px;
+	}
+	#ld h3.header3 {
+		font-size: 20px !important;
+	}
+	#ld #ld-duration-main.ld-service-duration .ld-duration-list .duration-box{
+		min-width: 110px;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		left: 0px;
+		background-size: 95%;	
+	}
+	#ld .ld-main-right .ld-step-heading h3.header3,
+	#ld #ld-price-scroll .ld-summary,
+	#ld .ld-main-right .ld-form-rown{
+		padding: 5px 6px !important;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-common,
+	#ld .ld-cart-wrapper .ld-cart-amount-common{
+		font-size: 15px;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-total-amount,
+	#ld .ld-cart-wrapper .ld-cart-total-amount {
+		font-size: 18px;
+		padding: 6px 0px;
+	}
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	#ld .ld_method_tab-slider--nav ul.ld_methods_slide li.ld_method_tab-slider-trigger{
+		width:33.33%;
+	}
+	#ld .ld_method_tab-slider--nav .ld_method_tab-slider-trigger {
+		padding: 11px 10px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot{
+		min-width: 100px;
+		width: -webkit-calc(100% / 3 - 10px);
+		width: -moz-calc(100% / 3 - 10px);
+		width: -o-calc(100% / 3 - 10px);
+		width: -ms-calc(100% / 3 - 10px);
+		width: calc(100% / 3 - 10px);
+	}
+	#ld .today-date a.ld-button{
+		left: 3%;
+	}
+	#ld .today-date .ld-selected-date-view{
+		margin-right: 10%;
+	}
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	#ld .today-date{
+		text-align: center;
+	}
+	#ld .today-date .ld-selected-date-view{
+		width: 100%;
+		line-height: 30px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot{
+		min-width: 100px;
+	}
+	#ld .today-date a.ld-button{
+		left: 0;
+	}
+	#ld #ld-meth-unit-type-3 .ld-btn-group .ld-btn-left,
+	#ld #ld-meth-unit-type-3 .ld-btn-group .ld-btn-right{
+		padding: 10px 5px;
+	}
+	
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot {
+		min-width: 114px;
+	}
+	#ld .today-date a.ld-button{
+		left: 13%;
+	}
+	#ld .ld_method_tab-slider--nav ul.ld_methods_slide li.ld_method_tab-slider-trigger{
+		width:33.33%;
+	}
+	#ld .ld_method_tab-slider--nav .ld_method_tab-slider-trigger {
+		padding: 11px 10px;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	#ld .ld_method_tab-slider--nav ul.ld_methods_slide li.ld_method_tab-slider-trigger{
+		width:33.33%;
+	}
+	#ld .ld_method_tab-slider--nav .ld_method_tab-slider-trigger {
+		padding: 11px 10px;
+	}
+	#ld .today-date{
+		text-align: center;
+	}
+	#ld .today-date .ld-selected-date-view{
+		width: 100%;
+		line-height: 30px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot{
+		min-width: 105px;
+	}
+	#ld .today-date a.ld-button{
+		left: 0;
+	}
+		
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-device-width : 767px) {
+	.slick-prev, .slick-next {
+    	top: 40% !important;
+	}
+	.slick-next {
+	    right: -10px !important;
+	}
+	.slick-prev{
+		left: -10px !important;
+	}
+	.header2 {
+		margin-top: 40px !important;
+	}
+	#ld .ld_method_tab-slider--nav ul.ld_methods_slide li.ld_method_tab-slider-trigger{
+		width:33.33%;
+	}
+	#ld .ld_method_tab-slider--nav .ld_method_tab-slider-trigger {
+		padding: 11px 10px;
+	}
+	#ld .ld-main-left .ld-location-header .ld-mybookings{
+		position: unset;
+		padding: 8px 10px;
+	}
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6 {
+		float: left;
+		width: 40%;
+	}
+	#ld .ld-extra-services-list ul.addon-service-list li {
+		min-height: 225px;
+		width: 50%;
+	}
+	#ld .ld-list-services ul.services-list li .ld-service{
+		min-height: 200px;
+		max-width: 200px;
+	}
+	#ld .ld-address-area-main .ld-postal-code input.ld-postal-input,
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 60%;
+	}
+	#ld #ld-duration-main.ld-service-duration .ld-duration-list .duration-box{
+		min-width: 105px;
+	}
+	#ld .ld-peronal-details .ld-sm-4 {
+        width: 33.33333333%;
+    }
+	#ld .ld-meth-unit-count .ld-inner-box .ld-btn-group.ld-sm-6{
+		width: 50%;
+		float: left;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot{
+		min-width: 100px;
+		width: -webkit-calc(100% / 3 - 10px);
+		width: -moz-calc(100% / 3 - 10px);
+		width: -o-calc(100% / 3 - 10px);
+		width: -ms-calc(100% / 3 - 10px);
+		width: calc(100% / 3 - 10px);
+	}
+		
+	
+	#ld .ld-meth-unit-count .ld-inner-box .ld-btn-group.ld-sm-6 button{
+		padding: 10px 5px;
+	}
+	#ld #card-payment-fields .ld-exp-mnyr {
+		width: 70%;
+	}
+	#ld #card-payment-fields .ld-stripe-cvc{
+		width: 30%;
+	}
+	#ld #ld-price-scroll {
+		width: 100% !important;
+		margin: 0px !important;
+		position: relative !important;
+		box-shadow: unset !important;
+	}
+	#ld #card-payment-fields .ld-lock-image {
+		display: none;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		left: 110px;
+		top: 0px;
+		background-size: 80%;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		width: 65px;
+		height: 67px;
+	}
+	#ld #ld-not-scroll {
+		top: unset;
+		margin-top: 50px;
+	}
+	#ld .ld_recurrence_type_dropdown_1{
+		width: 95%;
+	}
+	
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	#ld .ld-address-area-main{
+		text-align: center;
+	}
+	#ld .ld-list-services ul.services-list li .ld-service .ld-service-img img{
+		min-height: 198px;
+	}
+	#ld h3.header3 {
+		font-size: 20px;
+	}
+	#ld h5.header5 {
+		font-size: 15px;
+	}
+	#ld .ld-list-services ul.services-list li .ld-service{
+		min-height: 200px;
+		max-width: 200px;
+	}
+	#ld .ld-address-area-main .ld-postal-code input.ld-postal-input,
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 80%;
+	}
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6 {
+		float: left;
+		width: 100%;
+	}
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 80%;
+	}
+	#ld .ld-address-area-main .ld-area-type .area-header{
+		width: 100%;
+		margin: 0px;
+		line-height: 20px;
+	}
+	#ld .ld-user-info-main .ld-main-details .ld-new-user-details .ld-xs-12,
+	#ld .ld-user-info-main .ld-main-details .ld-login-existing .ld-xs-12,
+	#ld .ld-user-info-main .ld-main-details .ld-peronal-details .ld-xs-12{
+		padding: 0 5px;
+	}
+	#ld .ld-peronal-details .ld-sm-4 {
+        width: 100%;
+    }
+	#ld .ld-xs-12{
+		
+	}
+	#ld .ld-datetime-select-main.ld-xs-12{
+		padding: 0px;
+	}
+	#ld .ld-common-box {
+		padding: 0px 10px 5px;
+	}
+	#ld .calendar-body .ld-week {
+		line-height: 39px;
+		min-height: 40px;
+	}
+	#ld .calendar-body .ld-day,
+	#ld .calendar-body .ld-week{
+		font-size: 11px;	
+	}
+	
+	#ld .today-date .ld-selected-date-view span.ld-date-selected,
+	#ld .today-date .ld-selected-date-view span.ld-time-selected{
+		width: 100%;
+		float: left;
+		line-height: 30px;
+		padding: 0px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul.time-slot-ul{
+		padding: 10px 15px 10px;
+		max-height: 250px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container .ld-slot-legends ul.ld-legends-ul li{
+		width: 100%;
+		margin: 0 !important;
+	}
+	#ld .today-date{
+		text-align: center;
+	}
+	#ld .today-date a.ld-button{
+		left: 0;
+	}
+	#ld .ld-btn-big {
+		width: 100%;
+		font-size: 15px !important;
+	}
+	#ld .ld-button:hover {
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		-o-border-radius: 30px;
+		border-radius: 30px;
+	}
+	#ld #ld-meth-unit-type-2.ld-meth-unit-count .ld-bedrooms .bedroom-box{
+		min-width: 120px;
+	}
+	#ld .ld-addon-count .ld-btn-group {
+		padding: 0 40px;
+	}
+	#ld #ld-type-2 .ld-service-list h3.service-name{
+		width: 73%;
+	}
+	#ld .ld-list-services ul.services-list li.ld-sm-6,
+	#ld .ld-meth-unit-count .ld-inner-box .ld-btn-group.ld-sm-6,
+	#ld .ld-extra-services-list ul.addon-service-list li.ld-sm-6{
+		width: 100%;
+	}
+	#ld .ld-extra-services-list .ld-btn-group .ld-btn-left,
+	#ld .ld-extra-services-list .ld-btn-group .ld-btn-right {
+		width: 29%;
+		vertical-align: middle;
+		margin: 0px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot {
+		width: 100%;
+		margin: 5px 0px;
+	}
+	#ld #card-payment-fields .ld-lock-image {
+		display: none;
+	}	
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		left: 110px;
+		top: 0px;
+		background-size: 80%;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		width: 65px;
+		height: 67px;
+	}
+	#ld #card-payment-fields .ld-exp-mnyr {
+		width: 100%;
+	}
+	#ld #card-payment-fields .ld-stripe-cvc{
+		width: 100%;
+	}
+	#ld #card-payment-fields .ld-exp-year {
+		width: 52% !important;
+	}
+	#ld #ld-price-scroll {
+		width: 100% !important;
+		margin: 0px !important;
+		position: relative !important;
+		box-shadow: unset !important;
+	}
+	#ld #ld-not-scroll {
+		top: unset;
+		margin-top: 50px;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-total-amount,
+	#ld .ld-cart-wrapper .ld-cart-total-amount {
+		font-size: 17px;
+	}	
+	#ld a.ld-back-to-top{
+		right: 5px;
+		bottom: 10px;
+	}
+	#ld .ld_recurrence_type_dropdown_1{
+		width: 95%;
+	}
+	#ld .ld_recurrence_type_dropdown_1::after {
+		top:48px;
+	}
+
+}
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+	
+	
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+	
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-device-width: 319px) {
+	#ld .ld-address-area-main{
+		text-align: center;
+	}
+	#ld .ld-peronal-details .ld-sm-4 {
+        width: 100%;
+    }
+	
+	#ld h3.header3 {
+		font-size: 20px;
+	}
+	#ld h5.header5 {
+		font-size: 15px;
+	}
+	#ld .ld-address-area-main .ld-postal-code input.ld-postal-input,
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 80%;
+	}
+	#ld .ld-list-services ul.services-list li .ld-service{
+		min-height: 150px;
+		max-width: 150px;
+	}
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6 {
+		float: left;
+		width: 100%;
+	}
+	#ld .ld-address-area-main .ld-area-type input.ld-area-input {
+		width: 41%;
+	}
+	#ld .ld-address-area-main .ld-area-type .area-header{
+		width: 50%;
+		margin: 0px;
+	}
+	#ld .ld-user-info-main .ld-main-details .ld-new-user-details .ld-xs-12,
+	#ld .ld-user-info-main .ld-main-details .ld-login-existing .ld-xs-12,
+	#ld .ld-user-info-main .ld-main-details .ld-peronal-details .ld-xs-12{
+		padding: 0 5px;
+	}
+	#ld .ld-xs-12{
+		
+	}
+	#ld .ld-datetime-select-main.ld-xs-12{
+		padding: 0px;
+	}
+	#ld .ld-common-box {
+		padding: 0px 10px 5px;
+	}
+	#ld .calendar-body .ld-week {
+		line-height: 39px;
+		min-height: 40px;
+	}
+	#ld .calendar-body .ld-day,
+	#ld .calendar-body .ld-week{
+		font-size: 11px;	
+	}
+	
+	#ld .today-date .ld-selected-date-view span.ld-date-selected,
+	#ld .today-date .ld-selected-date-view span.ld-time-selected{
+		width: 100%;
+		float: left;
+		line-height: 30px;
+		padding: 0px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul.time-slot-ul{
+		padding: 10px 15px 10px;
+		max-height: 250px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container .ld-slot-legends ul.ld-legends-ul li{
+		width: 100%;
+		margin: 0 !important;
+	}
+	#ld .today-date{
+		text-align: center;
+	}
+	#ld .today-date a.ld-button{
+		left: 0;
+	}
+	#ld .ld-btn-big {
+		width: 100%;
+		font-size: 15px !important;
+	}
+	#ld .ld-button:hover {
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		-o-border-radius: 30px;
+		border-radius: 30px;
+	}
+	#ld #ld-meth-unit-type-2.ld-meth-unit-count .ld-bedrooms .bedroom-box{
+		min-width: 105px;
+	}
+	#ld .ld-addon-count .ld-btn-group {
+		padding: 0 40px;
+	}
+	#ld #ld-type-2 .ld-service-list h3.service-name{
+		width: 73%;
+	}
+	#ld .ld-list-services ul.services-list li.ld-sm-6,
+	#ld .ld-meth-unit-count .ld-inner-box .ld-btn-group.ld-sm-6,
+	#ld .ld-extra-services-list ul.addon-service-list li.ld-sm-6{
+		width: 100%;
+	}
+	#ld .ld-extra-services-list .ld-btn-group .ld-btn-left,
+	#ld .ld-extra-services-list .ld-btn-group .ld-btn-right {
+		width: 29%;
+		vertical-align: middle;
+		margin: 0px;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot {
+		width: 100%;
+		margin: 5px 0px;
+	}
+	#ld #card-payment-fields .ld-lock-image {
+		display: none;
+	}	
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		left: 110px;
+		top: 0px;
+		background-size: 80%;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		width: 65px;
+		height: 67px;
+	}
+	
+	#ld #card-payment-fields .ld-exp-mnyr {
+		width: 100%;
+	}
+	#ld #card-payment-fields .ld-stripe-cvc{
+		width: 100%;
+	}
+	#ld #card-payment-fields .ld-exp-month{
+		width: 92% !important;
+	}
+	#ld #card-payment-fields .ld-exp-year {
+		width: 100% !important;
+		margin-top: 10px;
+	}
+	#ld #ld-price-scroll {
+		width: 100% !important;
+		margin: 0px !important;
+		position: relative !important;
+		box-shadow: unset !important;
+	}
+	#ld #ld-not-scroll {
+		top: unset;
+		margin-top: 50px;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-total-amount,
+	#ld .ld-cart-wrapper .ld-cart-total-amount {
+		font-size: 17px;
+	}	
+	#ld a.ld-back-to-top{
+		right: 5px;
+		bottom: 10px;
+	}
+	#ld .ld_recurrence_type_dropdown_1{
+		width: 95%;
+	}
+	#ld .ld_recurrence_type_dropdown_1::after {
+		top:48px;
+	}
+}

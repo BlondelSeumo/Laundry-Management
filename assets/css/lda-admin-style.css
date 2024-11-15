@@ -1,0 +1,4867 @@
+/*
+Laundry - Admin style Main
+Version : 2.0
+*/
+
+html {
+    -webkit-font-smoothing: antialiased !important;
+    overflowY: hidden !important;
+}
+
+body {
+    font-family: 'Open Sans' !important;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 22px;
+    background: #ffffff;
+    color: #5d5d5d !important;
+}
+
+.ld-wrapper {
+    clear: both;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+#lda header.ld-header {
+    position: relative;
+}
+
+#lda #lda-top-nav .navbar-header a.navbar-brand,
+#lda #lda-main-navigation .navbar-header a.navbar-brand {
+    font-weight: 600;
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+#lda #lda-top-nav .navbar-header a.navbar-brand img,
+#lda #lda-main-navigation .navbar-header a.navbar-brand img {
+    width: 100%;
+}
+
+#lda #lda-top-nav .navbar-toggle .icon-bar,
+#lda #lda-main-navigation .navbar-toggle .icon-bar {
+    background: #fff;
+}
+
+#lda #lda-top-nav .navbar {
+    min-height: 50px;
+    border: 0 none;
+    margin: 0;
+}
+
+#lda #lda-main-navigation .navbar-fixed-top.lda-admin-nav {
+    top: 50px;
+}
+
+#lda #lda-main-navigation .navbar {
+    min-height: 65px;
+    border: 0 none;
+    z-index: 999;
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab li,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar li {
+    float: left;
+    min-width: 90px;
+    height: 65px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    border-left: 1px solid #4A4A4A;
+    border-right: 1px solid #292929;
+}
+
+#lda header.ld-header {
+    position: relative;
+}
+
+.multiselect {
+    position: relative;
+}
+
+.multiselect .selected-hold {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.3em 0 0 0.3em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.multiselect .selected-hold.focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.multiselect .selected-item {
+    margin: 0 0.3em 0.3em 0;
+    padding: .1em .5em;
+    border-radius: 4px;
+    border: 1px solid #bfbfbf;
+    background-color: #e6e6e6;
+}
+
+.multiselect .selected-item .item-label {
+    margin-right: .5em;
+}
+
+.multiselect .selected-item .close {
+    outline: none;
+}
+
+.multiselect .selected-item.active {
+    border-color: #1d7ecc;
+}
+
+.multiselect .item-search {
+    width: 50px;
+    margin: 0 .5em .5em 0;
+    border: none;
+    outline: none;
+}
+
+.multiselect .suggest-panel {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.multiselect .suggest-panel .suggest-item {
+    padding: .4em .8em;
+}
+
+.multiselect .suggest-panel .suggest-item.active {
+    background-color: #e6e6e6;
+}
+
+.multiselect .suggest-panel .suggest-item.disabled {
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.multiselect .suggest-panel .suggest-item .highlight {
+    background-color: #ff0;
+}
+
+.multiselect .text-tester {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>li>a,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>li>a {
+    font-family: inherit;
+    text-shadow: none;
+    color: #BCBCBC;
+    font-size: 11px;
+    padding: 0 12px;
+    line-height: 22px;
+    font-weight: bold;
+    font-weight: 400;
+    background-image: unset;
+    height: 100%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>li>a .fa,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>li>a .fa {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    margin-right: 0px;
+    font-size: 24px;
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>li>a span,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>li>a span {
+    display: block;
+    padding-bottom: 2px;
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>.active>a,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>.active>a,
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>.active>a:focus,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>.active>a:focus {
+    background-color: #242C33;
+    color: #FFF;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+#lda #lda-main-navigation .navbar .nav.lda-nav-tab>li>a:hover,
+#lda #lda-main-navigation .navbar .nav.user-nav-bar>li>a:hover {
+    background-color: rgb(85, 88, 92);
+    color: #FFF;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+#lda #lda-top-nav {
+    font-family: inherit;
+    border-radius: 0px;
+    background: #2E363E none no-repeat scroll 0% 0%;
+    border: medium none;
+    filter: none;
+    height: 50px;
+    border-bottom: 1px solid #000;
+}
+
+#lda #lda-main-navigation {
+    font-family: inherit;
+    border-radius: 0px;
+    background: #2E363E none no-repeat scroll 0% 0%;
+    border: medium none;
+    filter: none;
+    height: 65px;
+    border-bottom: 1px solid #000;
+}
+
+
+/* for show at top in chrome */
+
+#lda .datepicker-dropdown {
+    z-index: 1060 !important;
+}
+
+#lda #lda-top-nav .navbar-right {
+    margin-right: 0px;
+}
+
+#lda #lda-top-nav .navbar-right label {
+    color: #fff;
+    line-height: 45px;
+}
+
+#lda #lda-top-nav .navbar-right .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 160px;
+    top: 0px;
+    right: 5px;
+    padding-left: 10px;
+}
+
+#lda #lda-top-nav .navbar-right .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) .btn {
+    padding: 3px 6px;
+}
+
+#lda #ld-notification-top {
+    display: inline-block;
+    padding: 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+#lda #ld-notifications i.fa-angle-down,
+#lda #ld-user-info i.fa-angle-down {
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+#lda #lda-top-nav .navbar .nav>li>a.ld-notifications-new {
+    float: none;
+    position: relative;
+}
+
+#lda .ld-overlay-notification.visible {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: auto;
+    z-index: 9999;
+}
+
+#lda .ld-overlay-notification {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    transition-property: background-color, visibility;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+#lda .ld-notifications-inner {
+    height: 99.5%;
+    max-width: 90%;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    border: 1px solid gray;
+    border-width: 0px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 99999;
+    box-sizing: border-box;
+}
+
+#lda .ld-notifications-inner.visible {
+    right: 0px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#lda .ld-notification-main .notification-header {
+    margin: 0px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+}
+
+#lda .ld-notification-main .notification-header #ld-close-notifications {
+    position: relative;
+    cursor: pointer;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: initial;
+}
+
+
+/*
+#lda .ld-notification-main .notification-header #ld-close-notifications i:hover{
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+} */
+
+#lda .ld-notification-main .ld-recent-booking-container {
+    text-align: left;
+    margin: 0px;
+    padding: 0px 0px 10px;
+    position: absolute;
+    overflow: auto;
+    display: inline-block;
+    height: 90%;
+    width: 100%;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list {
+    list-style-type: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list li {
+    cursor: pointer;
+    padding: 0px 13px;
+    background: #f8f8f8;
+    display: table;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list .list-inner {
+    padding: 10px 0px;
+    float: left;
+    word-wrap: break-word;
+    width: 100%;
+    border-bottom: 1px solid rgba(156, 156, 156, 0.36);
+    display: inline-block;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list .list-inner span.booking-text {
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 20px;
+    text-align: justify;
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list li .list-inner span.booking-time {
+    font-size: 11px;
+    font-family: inherit;
+    line-height: 18px;
+    margin-top: 5px;
+    position: relative;
+    clear: left;
+}
+
+
+/* css loader */
+
+#lda .ld-loading-main {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    z-index: 99999;
+}
+
+#lda .loader,
+#lda .loader:before,
+#lda .loader:after {
+    background: #ffffff;
+    -webkit-animation: load1 1s infinite ease-in-out;
+    -moz-animation: load1 1s infinite ease-in-out;
+    -o-animation: load1 1s infinite ease-in-out;
+    -ms-animation: load1 1s infinite ease-in-out;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+
+#lda .loader:before,
+#lda .loader:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+
+#lda .loader:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    -moz-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+#lda .loader {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    -moz-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+#lda .loader:after {
+    left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #ffffff;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+
+@-moz-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #ffffff;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #ffffff;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+
+
+/* css loader grey mode*/
+
+#lda .ld-loading-grey-main {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 99999;
+}
+
+#lda .loader-grey,
+#lda .loader-grey:before,
+#lda .loader-grey:after {
+    background: #a5a2a2;
+    -webkit-animation: load2 1s infinite ease-in-out;
+    -moz-animation: load2 1s infinite ease-in-out;
+    -o-animation: load2 1s infinite ease-in-out;
+    -ms-animation: load2 1s infinite ease-in-out;
+    animation: load2 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+
+#lda .loader-grey:before,
+#lda .loader-grey:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+
+#lda .loader-grey:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    -moz-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+#lda .loader-grey {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    -moz-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+#lda .loader-grey:after {
+    left: 1.5em;
+}
+
+@-webkit-keyframes load2 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #a5a2a2;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #a5a2a2;
+        height: 5em;
+    }
+}
+
+@-moz-keyframes load2 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #a5a2a2;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #a5a2a2;
+        height: 5em;
+    }
+}
+
+@keyframes load2 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #a5a2a2;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #a5a2a2;
+        height: 5em;
+    }
+}
+
+#lda .ld-load-bar {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 6px;
+    background-color: #fdba2c;
+}
+
+#lda .ld-bar {
+    content: "";
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 50%;
+    text-align: center;
+}
+
+#lda .ld-bar:nth-child(1) {
+    background-color: #da4733;
+    animation: loading 3s linear infinite;
+}
+
+#lda .ld-bar:nth-child(2) {
+    background-color: #3b78e7;
+    animation: loading 3s linear 1s infinite;
+}
+
+#lda .ld-bar:nth-child(3) {
+    background-color: #fdba2c;
+    animation: loading 3s linear 2s infinite;
+}
+
+@keyframes loading {
+    from {
+        left: 50%;
+        width: 0;
+        z-index: 100;
+    }
+    33.3333% {
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    to {
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+/* alert all messages */
+
+#lda .ld-alert-msg-show-main {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    top: 10px;
+    display: none;
+}
+
+#lda .ld-all-alert-messags.alert {
+    position: relative;
+    top: 50px;
+    padding: 10px 20px;
+    margin: 0px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 30px;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.30), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.30), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.30), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.30), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+}
+
+#lda button.dropdown-toggle span i.fa-calendar-check-o.booking-staff-assigned {
+    position: relative;
+    right: -4px;
+    color: #f00;
+}
+
+.dropdown-menu.open ul li.selected a span.fa-calendar-check-o.booking-staff-assigned {
+    position: relative;
+    top: 0px;
+    color: #f00;
+}
+
+
+/* new line icons font size */
+
+#lda a#ld-notifications i.icon-bell,
+#lda i.icon-user,
+#lda a#ld-notifications .fa-angle-down {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    font-weight: bold;
+}
+
+
+/* appointment details modal popup */
+
+#lda .modal-md {
+    width: 450px;
+}
+
+#lda #booking-details .nav>.active>a,
+#lda #edit-booking-details-view .nav>.active>a {
+    background-color: #fff !important;
+    color: #555 !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+#lda #booking-details .nav>li>a:hover,
+#lda #edit-booking-details-view .nav>li>a:hover {
+    background-color: #fff !important;
+    color: #555 !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+#lda #edit-booking-details-view img.ld-user-img,
+#lda #booking-details img.ld-user-img {
+    width: 40px;
+    height: 40px;
+}
+
+#lda .modal-body table {
+    width: 100%;
+}
+
+#lda .modal-footer table td,
+#lda .modal-body table td {
+    padding: 5px;
+}
+
+#lda #booking-details .modal-body .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn),
+#lda #edit-booking-details-view .modal-body .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn),
+#lda #add-new-booking-details .modal-body .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+#lda #booking-details .modal-body .form-group {
+    margin-bottom: 1px;
+}
+
+#lda #booking-details .modal-body .bootstrap-select.btn-group .dropdown-menu {
+    max-height: 260px !important;
+}
+
+#lda #booking-details .modal-body .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda #lda-dashboard.panel,
+#lda #lda-services-panel.panel,
+#lda #lda-clean-services-panel.panel,
+#lda #lda-staff-panel.panel,
+#lda #lda-customers-listing.panel,
+#lda #lda-customers-listing.panel .panel-default,
+#lda #lda-payments.panel,
+#lda #lda-payments.panel .panel-default,
+#lda #ld-settings.panel,
+#lda #ld-settings .ld-setting-details div .panel,
+#lda #ld-settings .ld-setting-details div .panel-default {
+    box-shadow: unset;
+    border: 0px none;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+/* dashborad index page */
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li>a {
+    border: 1px solid #E7ECF1;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li.active>a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
+    -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .13) !important;
+}
+
+#lda #lda-dashboard .fa-calendar-check-o {
+    margin: 0px;
+}
+
+#lda #lda-dashboard .ld-title-amount-stats,
+#lda #lda-dashboard .ld-icon-booking-stats {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li>a {
+    border: 1px solid #E7ECF1;
+    display: block;
+    overflow: hidden;
+    padding: 4px 15px;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li>a h4.ld-dash-header {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px 10px;
+    color: #778492;
+    display: block;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li>a h4.ld-dash-header span {
+    font-size: 14px;
+    line-height: 22px;
+    color: #337AB7;
+    display: none;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li.active>a {
+    padding: 10px 15px;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li.active>a h4.ld-dash-header {
+    font-size: 20px;
+}
+
+#lda #lda-dashboard .ld-top-menus-stats.nav>li.active>a h4.ld-dash-header span {
+    display: block;
+}
+
+#lda .ld-top-bar-details .ld-today-right .ld-text,
+#lda .ld-top-bar-details .ld-this-week-right .ld-text,
+#lda .ld-top-bar-details .ld-this-year-right .ld-text,
+#lda .ld-top-bar-details .ld-total-details .ld-text {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height: 34px;
+}
+
+#lda .ld-top-bar-details .ld-today-right .ld-value,
+#lda .ld-top-bar-details .ld-this-week-right .ld-value,
+#lda .ld-top-bar-details .ld-this-year-right .ld-value {
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 26px;
+    display: block;
+}
+
+#lda .ld-total-details .ld-text {
+    line-height: 28px;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 31px;
+}
+
+#lda .ld-total-details .ld-value {
+    line-height: 28px;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 80px;
+}
+
+#lda #lda-dashboard .ld-title-amount-stats .ld-stats-total {
+    display: block;
+    font-size: 28px;
+    font-weight: 300;
+    color: #3E4F5E;
+    position: relative;
+    top: 8px;
+}
+
+#lda #lda-dashboard .ld-dash-icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 41px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+#lda #lda-dashboard .ld-dash-icon.today {
+    background: #616774 none repeat scroll 0% 0% !important;
+}
+
+#lda #lda-dashboard .ld-dash-icon.this-week {
+    background: #5AD3D1 none repeat scroll 0% 0% !important;
+}
+
+#lda #lda-dashboard .ld-dash-icon.this-year {
+    background: #FF5A5E none repeat scroll 0% 0% !important;
+}
+
+#lda #lda-dashboard .ld-stats-title {
+    padding-top: 2px;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #8E9DAA;
+}
+
+#lda #lda-dashboard .ld-stats-counting {
+    display: block;
+    font-size: 21px;
+    font-weight: 600;
+    color: #3E4F5E;
+}
+
+#lda #lda-dashboard .ld-left-menu-stats ul li a {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
+    line-height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+#lda .nav li.active a {
+    font-weight: 600;
+}
+
+#lda #lda-dashboard .ld-left-menu-stats {
+    background: #E1E7EB none repeat scroll 0% 0%;
+    height: 100%;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lda #lda-dashboard .ld-statistic-month-main table.ld-statistic-month tr td {
+    padding: 9px 15px;
+}
+
+#lda #lda-dashboard .ld-all-stats canvas.ld-today-canvas,
+#lda #lda-dashboard .ld-all-stats canvas.ld-week-canvas,
+#lda #lda-dashboard .ld-all-stats canvas.ld-year-canvas {
+    width: 400px;
+    height: 370px;
+}
+
+
+/* new appointments listing */
+
+#lda #lda-dashboard .ld-today-bookings-main,
+#lda #lda-dashboard .ld-latest-activity {
+    height: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-booking-list,
+#lda #lda-dashboard .ld-latest-activity .ld-bookings-activity-list {
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list,
+#lda #lda-dashboard .ld-latest-activity .ld-activity-list {
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+#lda .ld-notification-main ul.ld-recent-booking-list .list-inner span.booking-text .ld-label,
+#lda #lda-dashboard .ld-latest-activity .ld-activity-list .ld-label {
+    padding: 3px 10px
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list:hover,
+#lda #lda-dashboard .ld-latest-activity .ld-activity-list:hover {
+    background: #f9f9f9;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list .ld-today-left {
+    min-width: 80px;
+    padding-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list .ld-today-center {
+    display: table-cell;
+    vertical-align: top;
+    overflow: hidden;
+    float: left;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list .ld-today-center.col-md-7,
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list .ld-today-right.col-md-3 {
+    padding: 0px;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-list .ld-today-right {
+    display: table-cell;
+    vertical-align: top;
+    overflow: hidden;
+    float: right;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main i.icon-user,
+#lda #lda-dashboard .ld-latest-activity i.icon-user {
+    font-size: inherit;
+    position: relative;
+    top: unset;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-today-center .ld-service-text,
+#lda #lda-dashboard .ld-latest-activity .ld-activity-list .ld-service-text {
+    color: #315D51;
+    font-size: 14px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-dashboard .panel-default>.panel-heading {
+    background-color: unset;
+    border-color: unset;
+    background-image: none;
+    border: none !important;
+}
+
+#lda #lda-dashboard .panel-heading {
+    background: transparent;
+    border-radius: 0px;
+    border-bottom: 0px;
+    padding: 15px 15px 5px 15px;
+    position: relative;
+    z-index: 3;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+#lda #lda-dashboard .ld-statistic-month-main .panel-body,
+#lda #lda-dashboard .ld-today-bookings .panel-body,
+#lda #lda-dashboard .ld-bookings-activity .panel-body {
+    padding: 0px;
+}
+
+#lda #lda-dashboard .ld-statistic-month-main hr#hr,
+#lda #lda-dashboard .ld-today-bookings hr#hr,
+#lda #lda-dashboard .ld-bookings-activity hr#hr {
+    margin: 0px;
+}
+
+#lda #lda-dashboard .ld-today-bookings-main .ld-no-today-booking-message,
+#lda #lda-dashboard .ld-latest-activity .ld-no-booking-activity-message {
+    text-align: center;
+    margin: 22% 0px;
+}
+
+
+/* customers details */
+
+#lda #booking-details .modal-body img.ld-user-img #lda #edit-booking-details-view .modal-body img.ld-user-img {
+    width: 50px;
+    height: 50px;
+}
+
+#lda .ld-header .modal-content .modal-footer,
+#lda #booking-details .modal-content .modal-footer,
+#lda #edit-booking-details-view .modal-content .modal-footer {
+    text-align: center;
+    clear: both;
+}
+
+#lda .ld-header .ld-delete-appointment-cal-popup,
+#lda #booking-details #ld-delete-appointment,
+#lda #booking-details-dashboard .ld-delete-appointment-cal-popup,
+#lda #booking-details-calendar .book_cancel,
+#lda #edit-booking-details-view .book_cancel,
+#lda #edit-booking-details-view .book_cancel_apt {
+    color: #CC3F3B;
+    float: none !important;
+}
+
+#lda .ld-header .confirm_book,
+#lda #booking-details .ld-confirm-appointment,
+#lda #booking-details-calendar .ld-confirm-appointment-cal,
+#lda #booking-details-calendar .ld-complete-appointment-cal,
+#lda #booking-details-dashboard .ld-confirm-appointment,
+#lda #edit-booking-details-view .confirm_book {
+    color: #54AE54;
+}
+
+#lda .ld-header #ld-reject-appointment-cal-popup,
+#lda #booking-details #ld-reject-appointment,
+#lda #booking-details-calendar .book_rejct,
+#lda #edit-booking-details-view .book_rejct,
+#lda #edit-booking-details-view .book_das_appt {
+    color: #2c2c2c;
+}
+
+#lda .ld-header .modal-footer .ld-footer-popup-btn,
+#lda #booking-details .modal-footer .ld-footer-popup-btn,
+#lda #edit-booking-details-view .modal-footer .ld-footer-popup-btn {
+    line-height: 53px;
+}
+
+
+/*
+#lda .ld-header .modal-footer .ld-footer-popup-btn .ld-small-btn,
+#lda #booking-details .modal-footer .ld-footer-popup-btn .ld-small-btn,
+#lda #edit-booking-details-view .modal-footer .ld-footer-popup-btn .ld-small-btn {
+    padding: 6px 2px;
+}
+*/
+
+#lda #booking-details-calendar .close,
+#lda #booking-details-dashboard .close,
+#lda #change-detail-password .close,
+#lda #booking-details .close,
+#lda #user-booking-details .close,
+#lda #update-user-booking-details .close,
+#lda #edit-booking-details-view .close,
+#lda #add-new-booking-details .close,
+#lda .ld-account-config .close,
+#lda .delete-account-form .close {
+    float: right;
+    font-size: 50px;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+
+
+/****************************/
+
+
+/****  Appointments page style ***/
+
+#lda #ld-calendar-all {
+    background: #ffffff;
+}
+
+#lda #ld-calendar-all .ld-legends-panel-body {
+    padding: 5px;
+}
+
+#lda #ld-calendar-all .ld-booking-calendar {
+    float: none !important;
+    width: 95% !important;
+    display: block !important;
+    margin: 0px auto 50px !important;
+    cursor: default !important;
+}
+
+#lda #ld-calendar-all .ld-legends-main {
+    float: none;
+    width: 95%;
+    margin: 0px auto;
+}
+
+#lda .popover {
+    min-width: 200px;
+}
+
+#lda .fc-day-grid-event .fc-content div hr#hr {
+    margin: 3px 0px 2px !important;
+}
+
+#lda .fc-row .fc-content-skeleton tbody td {
+    padding-bottom: 5px;
+}
+
+#lda .fc-day-grid-event .fc-content i.fa-check,
+#lda .fc-time-grid-event .fc-content i.fa-check,
+#lda .fc-day-grid-event .fc-content i.fa-pencil-square-o,
+#lda .fc-time-grid-event .fc-content i.fa-pencil-square-o,
+#lda .fc-day-grid-event .fc-content i.fa-ban,
+#lda .fc-time-grid-event .fc-content i.fa-ban,
+#lda .fc-day-grid-event .fc-content i.fa-times,
+#lda .fc-time-grid-event .fc-content i.fa-times,
+#lda .fc-day-grid-event .fc-content i.fa-info-circle,
+#lda .fc-time-grid-event .fc-content i.fa-info-circle,
+#lda .fc-day-grid-event .fc-content i.fa-times-circle-o,
+#lda .fc-time-grid-event .fc-content i.fa-times-circle-o,
+#lda .fc-day-grid-event .fc-content i.fa-thumbs-o-up,
+#lda .fc-time-grid-event .fc-content i.fa-thumbs-o-up,
+#lda .fc-day-grid-event .fc-content i.fa-thumbs-o-down,
+#lda .fc-time-grid-event .fc-content i.fa-thumbs-o-down {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+
+#lda .fc-time-grid-event {
+    min-height: 32px;
+}
+
+#lda #ld-calendar-all .ld-legends-main .ld-legends-inner ul li i.fa {
+    font-size: 16px;
+}
+
+#lda #ld-calendar-all .ld-legends-main .ld-legends-inner ul li {
+    font-size: 15px;
+}
+
+#lda .ld-calendar-top-bar {
+    float: left;
+    width: 100%;
+    min-height: 70px;
+    display: block;
+    cursor: pointer;
+}
+
+#lda .ld-calendar-top-bar .ld-search-calander-btn .ld-submit-btn {
+    margin: 0px;
+}
+
+#lda .ld-calendar-top-bar .ld-search-calander-btn {
+    padding: 20px 5px 10px;
+}
+
+#lda .ld-frequently-discount-collapse-div .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 195px;
+}
+
+#lda .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 300px;
+}
+
+#lda div#reportrange {
+    width: 370px;
+}
+
+#lda .fc {
+    /* extra precedence to overcome jqui */
+    font-size: 14px;
+    clear: both;
+}
+
+#lda .fc-toolbar {
+    height: 60px;
+    background: #36404b;
+    color: #fff;
+    border-radius: 1px;
+    border-top: 1px solid #36404b;
+    border-left: 1px solid #36404b;
+    border-right: 1px solid #36404b;
+}
+
+#lda .fc-agenda-view .fc-day-grid,
+td.fc-widget-content hr.fc-divider.fc-widget-header {
+    display: none;
+}
+
+#lda .fc-widget-header th.fc-axis.fc-widget-header {
+    width: 21px !important;
+}
+
+
+/* new code for custom date picker in full calendar */
+
+#lda .main-calendar {
+    position: relative;
+    display: block;
+}
+
+
+/* header style */
+
+#lda .fc button {
+    padding: 5px 10px;
+    height: auto;
+}
+
+#lda .fc-toolbar h2 {
+    color: #fff;
+    font-size: 24px !important;
+    line-height: 54px;
+}
+
+#lda button.fc-today-button {
+    float: left;
+    display: inline-block;
+}
+
+#lda .fc button {
+    background: none !important;
+    border: none;
+    color: #fff;
+}
+
+#lda .fc-icon-left-single-arrow:after {
+    content: "\f100";
+    font-family: FontAwesome !important;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 24px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#lda .fc-icon-right-single-arrow:after {
+    content: "\f101";
+    font-family: FontAwesome !important;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 24px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#lda .fc-state-default.fc-corner-left {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#lda .fc-state-default.fc-corner-right {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#lda .fc button {
+    height: 60px;
+    padding: 0 15px;
+    text-transform: capitalize;
+    font-size: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.fc-state-down,
+.fc-state-active {
+    box-shadow: none !important;
+    background-color: #efefef !important;
+}
+
+#lda #ld-settings .ld-setting-details .tab-content>.active {
+    overflow-x: hidden;
+}
+
+
+/* table */
+
+#lda .fc table th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+}
+
+
+/* caledar booking details popup */
+
+#lda .ld-header li.ld-custmers {
+    padding: 10px 0px 0px !important;
+}
+
+#lda #edit-booking-details-view .modal-md {
+    width: 450px !important;
+}
+
+#lda .ld-header .modal-md {
+    width: 390px;
+}
+
+#lda .ld-header .booking-details-index-dashboard .modal-md {
+    width: 450px;
+}
+
+#lda .vertical-alignment-helper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#lda .vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#lda .modal-content {
+    width: inherit;
+    height: inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+
+#lda h6.ld-customer-details-hr,
+#lda #ld-calendar-all h6.ld-customer-details-hr {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#lda .ld-header ul.ld-cal-booking-details hr,
+#lda #ld-calendar-all ul.ld-cal-booking-details hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li,
+#lda #ld-calendar-all ul.ld-cal-booking-details li {
+    padding: 1px 0px;
+    margin: 0;
+    clear: both;
+    font-size: 13px;
+    list-style: none;
+    display: inline-block;
+    line-height: 20px;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li.ld-second-child,
+#lda #ld-calendar-all ul.ld-cal-booking-details li.ld-second-child {
+    top: -7px;
+    left: 120px;
+    width: 260px;
+    position: relative;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li.ld-second-child span,
+#lda #ld-calendar-all ul.ld-cal-booking-details li.ld-second-child span {
+    position: relative;
+    top: 2px;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li label,
+#lda #ld-calendar-all ul.ld-cal-booking-details li label {
+    width: 95px;
+    float: left;
+    color: #626262;
+    text-align: left;
+    margin-right: 17px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li.ld-second-child span,
+#lda #ld-calendar-all ul.ld-cal-booking-details li.ld-second-child span {
+    width: unset !important;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li span.span-scroll,
+#lda #ld-calendar-all ul.ld-cal-booking-details li span.span-scroll {
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 20px;
+    width: 300px;
+    word-wrap: break-word;
+    max-height: 70px;
+    overflow: auto;
+}
+
+#lda .ld-header ul.ld-cal-booking-details li span.span-scroll-staff,
+#lda #ld-calendar-all ul.ld-cal-booking-details li span.span-scroll-staff {
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 16px;
+    width: 300px;
+}
+
+#lda .ld-header .ld-booking-status,
+#lda #ld-calendar-all .ld-booking-status {
+    position: relative;
+    right: 10px;
+    top: -1px;
+    text-align: center;
+    font-size: 10px;
+}
+
+#lda .ld-header .ld-curr-status hr#hr,
+#lda #ld-calendar-all .ld-curr-status hr#hr {
+    margin: 0px 0px 3px;
+}
+
+#lda .ld-header .ld-booking-status,
+#lda #ld-calendar-all .ld-booking-status {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-left: 7px;
+    float: left;
+    color: #31bf57;
+}
+
+#lda .ld-header .ld-booking-status em,
+#lda #ld-calendar-all .ld-booking-status em {
+    font-style: normal;
+    margin-left: 5px;
+    text-transform: capitalize;
+    width: 240px;
+    display: inline-block;
+    text-align: left;
+}
+
+#lda .ld-header .ld-booking-status span.badge,
+#lda #ld-calendar-all .ld-booking-status span.badge {
+    display: inline-block;
+    padding: 4px;
+    min-width: 5px;
+    position: relative;
+    right: 4px;
+    top: -2px;
+}
+
+#lda .ld-appointment-popup {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    background: #fff;
+    margin: 30px auto;
+}
+
+
+/****************************/
+
+
+/****  Staff style ***/
+
+#lda #lda-staff-panel.tab-content {
+    padding: 15px;
+}
+
+#lda #lda-staff-panel .panel-body {
+    background: #fff;
+    padding: 0 15px;
+}
+
+#lda #lda-staff-panel .ld-staff-container {
+    width: 95%;
+    margin: 0px auto;
+    padding: 0px;
+    clear: both;
+}
+
+#lda #lda-staff-panel #ld-add-new-staff {
+    position: relative;
+    top: -7px;
+}
+
+#lda #lda-staff-panel .ld-staff-container h3 {
+    padding: 10px 0px 5px;
+    font-size: 22px;
+}
+
+#lda #lda-staff-panel .ld-staff-list {
+    background: #F1F5F7 none repeat scroll 0% 0%;
+    min-height: 670px;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lda #lda-staff-panel .ld-staff-list span.ld-staff-name {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    color: #8D8D8D;
+    line-height: 15px;
+    text-indent: 2px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 88%;
+    position: relative;
+    top: 3px;
+}
+
+#lda #lda-staff-panel .ld-staff-list ul li.active span.ld-staff-name {
+    color: #495861 !important;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff {
+    margin-top: 15px;
+    overflow-y: auto;
+    max-height: 470px;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list a {
+    padding: 8px 0 8px 5px;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list span.ld-manager-star {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    text-align: center;
+    line-height: 13px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list span.ld-manager-star input[type="checkbox"] {
+    display: none !important;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list span.ld-manager-star input[type="checkbox"]+label span i.fa-star {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list span.ld-manager-star input[type="checkbox"]:checked+label span i.fa-star:before {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    color: #EDB900;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list span.ld-manager-star input[type="checkbox"]:checked+label span .ld-text:after {
+    content: "Manager";
+    position: absolute;
+    display: block;
+    right: -15px;
+}
+
+#lda #lda-staff-panel .ld-staff-list .popover {
+    max-width: 340px;
+    width: 430px;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .ld-member-image-uploader .popover {
+    max-width: 150px;
+    width: 200px;
+}
+
+#lda #lda-staff-panel .ld-staff-list h3.popover-title {
+    background-color: #F8F8F8;
+    font-size: 15px;
+    padding: 8px 14px;
+    display: block;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list .ld-staff-clone {
+    display: inline-block;
+    width: 22px;
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+
+#lda #lda-staff-panel .ld-staf-img-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list .ld-staff-image {
+    display: inline-block;
+    width: 30px;
+    width: 30px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+
+#lda #lda-staff-panel .ld-clone-staff {
+    padding: 1px 3px;
+    position: relative;
+    top: 0px;
+    right: 2px;
+}
+
+#lda #lda-staff-panel .ld-clone-staff .ld-clone-staff i.fa-clone {
+    font-size: 12px !important;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list {
+    width: auto;
+    height: auto;
+    padding: 2px;
+    margin: 3px 0px;
+    position: relative;
+}
+
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list a:focus,
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list a:hover,
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list:hover,
+#lda #lda-staff-panel .ld-staff-list .ld-left-staff li.staff-list.active {
+    background: #dctctb;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+}
+
+
+/* right side staff member service list and price rules and top menu */
+
+#lda #lda-staff-panel .intl-tel-input .country-list {
+    min-width: 270px;
+}
+
+#lda #lda-staff-panel .ld-staff-top-header {
+    line-height: 30px;
+    color: #3C4C5C;
+    font-size: 24px;
+    float: left;
+    width: 100%;
+    padding: 35px 0px 10px 0px;
+}
+
+#lda #lda-staff-panel .ld-staff-top-header .popover {
+    max-width: 170px;
+    width: 180px;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+#lda #lda-staff-panel .ld-staff-right-menu {
+    text-transform: uppercase;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details table {
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details table tr td:first-child {
+    min-width: 22%;
+}
+
+
+/* staff > services */
+
+#lda .member-services .panel {
+    border: unset;
+}
+
+#lda .member-services .panel-default {
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    -o-box-shadow: unset;
+    border-color: unset;
+}
+
+#lda .member-services .ld-staff-service-panel.panel {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#lda .member-services .ld-staff-service-panel.panel-default {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#lda .member-services {
+    padding: 0px;
+}
+
+#lda .member-services input[type="checkbox"] {
+    display: none;
+}
+
+#lda .member-services .ld-service-time-member,
+#lda .member-services .ld-service-price-member {
+    line-height: 35px;
+    position: relative;
+    padding: 0px 5px;
+    min-width: 80px;
+    float: left;
+    display: inline-block;
+    text-align: right;
+}
+
+#lda #ld-staff-dashboard table tr td,
+#lda #lda-staff-panel table tr td {
+    padding: 5px;
+}
+
+#lda #ld-staff-dashboard table.offdaystable tr td.ld-calendar-box {
+    min-height: 300px;
+}
+
+
+/* staff service listing */
+
+#lda .member-services .ld-staff-service-panel .panel-heading {
+    padding: 3px 13px;
+    float: left;
+    width: 100%;
+}
+
+#lda .member-services .ld-staff-service-panel .panel-heading .ld-toggle {
+    margin: 4px 4px 4px 0px;
+    position: relative;
+}
+
+#lda .member-services .ld-staff-service-panel .panel-heading span.ld-service-title {
+    line-height: 33px;
+}
+
+
+/* staff pricing rules */
+
+#lda .member-services .ld-provider-custom-price-menu,
+#lda .member-services .ld-staff-price-rules .panel-body {
+    padding: 10px;
+}
+
+#lda .member-services .ld-staff-price-rules .panel,
+#lda .member-services .ld-staff-price-rules .panel-default {
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    -o-box-shadow: unset;
+    border-color: transparent;
+}
+
+#lda .member-services ul#ld-staff-breaks li.row {
+    line-height: 37px;
+    padding: 0px 0px 7px;
+}
+
+#lda .member-services .ld-staff-price-rules ul#ld-staff-price span.ld-day-name {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#lda .member-services .ld-staff-price-rules ul#ld-staff-price li.row {
+    line-height: 37px;
+    padding: 0px 0px 7px 0px;
+}
+
+#lda .member-services .ld-staff-price-rules .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 105px;
+}
+
+#lda .member-services .ld-staff-price-rules .bootstrap-select.btn-group .dropdown-menu {
+    max-height: 260px !important;
+}
+
+#lda .member-services .ld-staff-price-rules .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda .member-services .ld-staff-price-rules .ld-price-hours-to {
+    font-size: 12px;
+    margin: 0px 5px;
+}
+
+#lda .member-services .ld-staff-price-rules li#ld-add-price-row {
+    display: none;
+}
+
+
+/* staff > availabilty weekly */
+
+#lda .member-availabilty .ld-staff-time-schedule .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 110px;
+}
+
+#lda .member-availabilty .ld-staff-time-schedule .bootstrap-select.btn-group .dropdown-menu {
+    max-height: 260px !important;
+}
+
+#lda .member-availabilty .ld-staff-time-schedule .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda .member-availabilty ul#ld-staff-timing li.active {
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px 5px 10px 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#lda .member-availabilty .ld-staff-time-schedule .ld-staff-hours-to {
+    font-size: 12px;
+    margin: 0px 5px;
+}
+
+
+/*  staff breaks */
+
+
+/* hide box shadow and border color in breaks and availabilty */
+
+#lda .member-availabilty .panel,
+#lda .member-addbreaks .panel,
+#lda .member-offtime .panel,
+#lda .member-service-details .panel {
+    box-shadow: unset !important;
+    border: 0px !important;
+}
+
+#lda .member-availabilty .panel-default,
+#lda .member-addbreaks .panel-default,
+#lda .member-offtime .panel-default,
+#lda .member-service-details .panel-default {
+    border-color: unset !important;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 105px;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .bootstrap-select.btn-group .dropdown-menu {
+    max-height: 260px !important;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .bootstrap-select.btn-group .dropdown-menu ul {
+    overflow-y: auto;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .bootstrap-select.btn-group .dropdown-menu li {
+    margin: 0px !important;
+}
+
+#lda .member-addbreaks ul#ld-staff-breaks li.active {
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px 5px 10px 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#lda .member-addbreaks ul#ld-staff-breaks li .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+#lda .member-addbreaks .ld-staff-breaks-schedule .ld-staff-hours-to {
+    font-size: 12px;
+    margin: 0px 5px;
+}
+
+#lda .member-addbreaks ul#ld-staff-breaks span.ld-day-name {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#lda .member-offdays .highlight {
+    color: #fff !important;
+    background: #ff0000;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays .offdaystable .all {
+    cursor: pointer;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays .offdaystable .lda-col4 {
+    min-height: 268px !important;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offtime .ld-member-offtime-inner {
+    float: left;
+    width: 100%;
+    min-height: 70px;
+    display: block;
+    cursor: pointer;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays table.offdaystable tr td.ld-calendar-box {
+    min-height: 310px;
+    padding: 0 15px !important;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .member-offdays table.offdaystable tr td .ld-schedule-month-name div {
+    font-size: 18px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .ld-service-comm-staff #tab.btn-group a {
+    padding: 6px 15px 6px 25px;
+}
+
+#lda #lda-staff-panel .ld-staff-right-details .ld-service-comm-staff #tab.btn-group a.active:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 7px;
+    z-index: 9;
+}
+
+#lda #lda-staff-panel #staff-booking-payments .table-responsive {
+    overflow-x: unset !important;
+}
+
+
+/********************************************/
+
+
+/*******   Customers  page ****************/
+
+#lda #lda-customers-listing {
+    background: #F1F5F7 none repeat scroll 0% 0%;
+    border-color: #8D8D8D;
+    border-radius: 2px;
+}
+
+#lda #lda-customers-listing .tab-content {
+    padding: 15px;
+}
+
+td.details-control {
+    background: url('../resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.details td.details-control {
+    background: url('../resources/details_close.png') no-repeat center center;
+}
+
+
+/********************************************/
+
+
+/*******   Clean SERVICES page ****************/
+
+#lda #lda-clean-services-panel {
+    background: #F1F5F7;
+    border-color: #8D8D8D;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#lda #lda-clean-services-panel .panel-body,
+#lda #ld-settings #frequently-discount .panel-body {
+    background: #fff;
+    padding: 15px 15px 0px 15px;
+}
+
+#lda #lda-clean-services-panel .panel-default .panel-body,
+#lda #ld-settings #frequently-discount .panel-default .panel-body,
+#lda #ld-settings #labels ul.ld-labels-lang-ul .panel-default .panel-body {
+    padding: 10px;
+}
+
+#lda #lda-clean-services-panel .panel-default .ld-service-collapse-div.col-md-6 {
+    padding: 0px;
+}
+
+#lda #lda-clean-services-panel .panel-heading,
+#lda #ld-settings #frequently-discount .panel-heading,
+#lda #ld-settings #labels ul.ld-labels-lang-ul .panel-heading,
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing .panel-heading {
+    padding: 5px 10px;
+}
+
+#lda #lda-clean-services-panel .panel-heading,
+#lda #lda-clean-services-panel .panel,
+#lda #lda-clean-services-panel .panel-default,
+#lda #ld-settings #frequently-discount .panel-heading,
+#lda #ld-settings #frequently-discount .panel,
+#lda #ld-settings #frequently-discount .panel-default,
+#lda #ld-settings #labels ul.ld-labels-lang-ul .panel-heading,
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing .panel-heading {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px;
+    clear: both;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-container h3 {
+    padding: 10px 0px 5px;
+    font-size: 22px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list {
+    background: #F1F5F7 none repeat scroll 0% 0%;
+    min-height: 670px;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: left;
+    margin: 0px;
+    padding: 0px 0px 15px 0px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list span.ld-service-name {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8D8D8D;
+    line-height: 21px;
+    text-align: left;
+}
+
+#lda #lda-clean-services-panel .ld-service-list span.ld-service-name i.fa-th {
+    margin-right: 5px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list span.ld-service-name i.fa {
+    margin-right: 5px;
+    cursor: move;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-details.col-lg-9,
+#lda #ld-settings .ld-setting-details.col-lg-9 {
+    padding: 0px !important;
+}
+
+#lda #lda-clean-services-panel .ld-services-right-details .col-md-12 {
+    padding: 0px 0px 0px 15px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-right-details i.fa-th-list {
+    margin-right: 5px;
+    cursor: move;
+    position: relative;
+    top: 2px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list ul li.active span.ld-service-name {
+    color: #495861 !important;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3c4c5c;
+    line-height: 21px;
+    text-align: left;
+}
+
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service {
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+
+/* new style for service list left side */
+
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 24px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li a:focus,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li a:focus,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li a:hover,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li a:hover,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li:hover,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li:hover,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li.active {
+    background: #dctctb;
+}
+
+#lda #lda-clean-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li .ld-service-sort-icon,
+#lda #lda-clean-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li .ld-service-sort-icon {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 5px 0px;
+    cursor: move;
+}
+
+#lda #lda-clean-services-panel .ld-service-list .nav li a {
+    padding: 3px 5px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list .popover {
+    max-width: 220px;
+    width: 200px;
+}
+
+#lda #lda-clean-services-panel .ld-services-right-details ul li .popover {
+    width: 170px;
+    max-width: 200px;
+}
+
+#lda #lda-clean-services-panel .ld-service-list h3.popover-title {
+    background-color: #F8F8F8;
+    font-size: 15px;
+    padding: 8px 14px;
+    display: block;
+}
+
+
+/* right side services details and top menu */
+
+#lda #lda-clean-services-panel .ld-clean-service-top-header {
+    line-height: 30px;
+    color: #3C4C5C;
+    font-size: 24px;
+    float: left;
+    width: 100%;
+    padding: 15px 0px 10px 15px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-top-header .popover {
+    max-width: 230px;
+    width: 200px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-service-right-details {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#lda #lda-clean-services-panel .ld-service-right-menu {
+    text-transform: uppercase;
+}
+
+#lda #lda-clean-services-panel table tr td,
+#lda #ld-settings #frequently-discount table tr td {
+    padding: 5px;
+}
+
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing.panel,
+#lda #ld-settings #labels ul.ld-labels-lang-ul li.ld-labels-lang-listing.panel,
+#lda #ld-settings #frequently-discount .ld-frequently-discount-panel.panel {
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05) !important;
+    border: 1px solid transparent !important;
+    margin-bottom: 10px;
+}
+
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing.panel-default,
+#lda #ld-settings #labels ul.ld-labels-lang-ul li.ld-labels-lang-listing.panel-default,
+#lda #ld-settings #frequently-discount .ld-frequently-discount-panel.panel-default {
+    border-color: #ddd !important;
+}
+
+
+/* right side listing new style */
+
+#lda #lda-clean-services-panel .panel-heading .panel-title,
+#lda #ld-settings #frequently-discount .panel-heading .panel-title,
+#lda #ld-settings #labels ul.ld-labels-lang-ul li.ld-labels-lang-listing .panel-title,
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing .panel-title {
+    line-height: 31px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title span.ld-clean-service-title-name,
+#lda #ld-settings #frequently-discount .ld-frequently-discount-panel .panel-title span.ld-frequently-discount-panel-title-name,
+#lda #ld-settings #labels ul.ld-labels-lang-ul li.ld-labels-lang-listing .panel-title span.ld-label-lang-panel-title-name {
+    width: 88%;
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 33px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title .manage-price-calculation-btn,
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title .price-cal-method-btn,
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title .quantity-rules-btn {
+    margin: 2px 10px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title .manage-addons-btn,
+#lda #lda-clean-services-panel .ld-clean-services-panel .panel-title .delete-clean-service-btn {
+    margin: 2px 0px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#lda #lda-clean-services-panel .panel-heading .panel-title .badge {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 0px 5px !important;
+    -webkit-border-radius: 0px 5px !important;
+    -o-border-radius: 0px 5px !important;
+    -ms-border-radius: 0px 5px !important;
+    border-radius: 0px 5px !important;
+    margin: 0px 5px;
+}
+
+#lda #lda-clean-services-panel .panel .collapse.in {
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-clean-services-panel .ld-service-new-service li .lda-col1 {
+    min-width: 20px !important;
+    position: relative;
+    right: 10px;
+}
+
+#lda #lda-clean-services-panel .panel-heading .panel-title .ld-service-time-main,
+#lda #lda-clean-services-panel .panel-heading .panel-title .ld-service-price-main {
+    font-size: 13px;
+}
+
+#lda #lda-clean-services-panel .ld-create-service-table {
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-clean-services-panel .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+
+#lda #lda-clean-services-panel .ld-all-service-category .bootstrap-select {
+    width: 350px;
+}
+
+#lda #lda-clean-services-panel .ld-service-duration .bootstrap-select {
+    width: 110px;
+}
+
+#lda #lda-clean-services-panel .ld-service-duration .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda #lda-clean-services-panel .ld-service-duration .dropdown-menu>li>a:focus,
+#lda #lda-clean-services-panel .ld-service-duration .dropdown-menu>li>a:hover {
+    background: transparent linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -webkit-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -moz-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -o-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    color: #FFF;
+}
+
+
+/* service listing */
+
+#lda #lda-clean-services-panel .ld-add-new-service {
+    display: none;
+}
+
+
+/* serivce addons custom images style */
+
+
+/* 2. serivces dropdown */
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons span.lda-addon-img-icon,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon span.lda-addon-img-icon {
+    font-size: 20px;
+    padding: 10px 5px;
+    position: relative;
+    top: 15px;
+    left: 0px;
+    float: left;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-imagelist-dropdown,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-imagelist-dropdown {
+    margin-top: 15px;
+    float: left;
+    display: block;
+    width: 65%;
+    position: relative;
+    padding-left: 15px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addon-selection-main,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addon-selection-main {
+    display: block;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addon-is,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addon-is {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list {
+    padding: 6px 10px;
+    position: relative;
+    height: 46px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list:hover,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list:hover {
+    background-color: #F8F8F8;
+    cursor: pointer;
+    color: #555;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addon-is .lda-addons-list:after {
+    content: "\e604";
+    font-family: 'simple-line-icons';
+    position: absolute;
+    top: 31%;
+    right: 3%;
+    z-index: 99;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addon-is .lda-addons-list:after {
+    content: "\e604";
+    font-family: 'simple-line-icons';
+    position: absolute;
+    top: 32%;
+    right: 3%;
+    z-index: 99;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list i.icon-puzzle,
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list img.lda-addons-image,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list i.icon-puzzle,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list img.lda-addons-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 3px;
+    vertical-align: middle;
+    font-size: 46px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 46px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list i.icon-puzzle:before,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list i.icon-puzzle:before {
+    font-size: 34px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-list h3.lda-addons-name,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-list h3.lda-addons-name {
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin: 0;
+    padding-left: 30px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-selection-main .lda-addons-dropdown,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-selection-main .lda-addons-dropdown {
+    display: none;
+    background-color: #FFF;
+    border-bottom: 1px solid #e5e5e5;
+    overflow-y: auto;
+    position: absolute;
+    max-height: 300px;
+    width: 100%;
+    z-index: 9999;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    margin-top: -3px;
+    border-radius: 0 0 4px 4px;
+}
+
+#lda #lda-clean-services-panel .ld-clean-services-panel.lda-addon-icons .lda-addons-selection-main .lda-addons-dropdown .lda-addons-list,
+#lda #lda-clean-services-panel .ld-add-new-service.lda-add-new-addon .lda-addons-selection-main .lda-addons-dropdown .lda-addons-list {
+    border-top: thin solid #E5e5e5;
+}
+
+#lda #lda-clean-services-panel .ld-add-new-price-method {
+    display: none;
+}
+
+#lda #lda-clean-services-panel .ld-add-new-price-unit {
+    display: none;
+}
+
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing,
+#lda #ld-settings #frequently-discount ul#frequently-discount li,
+#lda #lda-clean-services-panel ul#sortable-services li,
+#lda #ld-settings #labels ul.ld-labels-lang-ul li.ld-labels-lang-listing,
+#lda #lda-clean-services-panel ul.my-sortable-addons-services li,
+#lda #lda-clean-services-panel ul.myservicemethodload li,
+#lda #lda-clean-services-panel ul#sortable-services-unit li {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#lda #lda-clean-services-panel ul.myservicemethodload li,
+#lda #lda-clean-services-panel ul#sortable-services-unit li {
+    margin-bottom: 10px;
+}
+
+#lda #lda-clean-services-panel .bootstrap-select.btn-group .dropdown-menu li {
+    margin-bottom: unset !important;
+}
+
+#lda #lda-clean-services-panel ul.ld-select-staff-ul li span.ld-service-provider-list {
+    width: 73%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 34px;
+}
+
+
+/* service manage unit price */
+
+#lda #lda-clean-services-panel .panel-default .panel-body .manage-unit-price-main .price-rules-select,
+#lda #lda-clean-services-panel .panel-default .panel-body .add-new-manage-unit-price .price-rules-select {
+    padding: 0;
+    margin: 0 15px 0 0;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    width: 70px;
+    float: left;
+}
+
+#lda #lda-clean-services-panel .panel-default .panel-body .manage-unit-price-main .price-rules-select select,
+#lda #lda-clean-services-panel .panel-default .panel-body .add-new-manage-unit-price .price-rules-select select {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-style: solid;
+}
+
+#lda #lda-clean-services-panel .panel-default .panel-body .manage-unit-price-main .price-rules-select:after,
+#lda #lda-clean-services-panel .panel-default .panel-body .add-new-manage-unit-price .price-rules-select:after {
+    top: 50%;
+    right: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #555;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+
+#lda #lda-clean-services-panel .panel-body .manage-unit-price-main ul li {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#lda #lda-clean-services-panel .panel-body .manage-unit-price-main a.update-addon-rule,
+#lda #lda-clean-services-panel .panel-body .manage-unit-price-main a.delete-addon-rule,
+#lda #lda-clean-services-panel .panel-body .add-new-manage-unit-price a.add-addon-price-rule {
+    margin: 0 5px 0 5px;
+}
+
+
+/********************************************/
+
+
+/*******   SERVICES page ****************/
+
+#lda #lda-services-panel {
+    background: #F1F5F7;
+    border-color: #8D8D8D;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#lda #lda-services-panel .panel-body {
+    background: #fff;
+    padding: 15px 15px 0px 15px;
+}
+
+#lda #lda-services-panel .panel-default .panel-body {
+    padding: 0px 5px 10px 5px;
+}
+
+#lda #lda-services-panel .panel-default .ld-service-collapse-div.col-md-7 {
+    padding: 0px;
+}
+
+#lda #lda-services-panel .panel-heading {
+    padding: 5px 10px;
+}
+
+#lda #lda-services-panel .panel-heading,
+#lda #lda-services-panel .panel,
+#lda #lda-services-panel .panel-default {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-services-panel .ld-service-container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px;
+    clear: both;
+}
+
+#lda #lda-services-panel .ld-service-container h3 {
+    padding: 10px 0px 5px;
+    font-size: 22px;
+}
+
+#lda #lda-services-panel .ld-service-list {
+    background: #F1F5F7 none repeat scroll 0% 0%;
+    min-height: 670px;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: left;
+    margin: 0px;
+    padding: 0px 0px 15px 0px;
+}
+
+#lda #lda-services-panel .ld-service-list span.ld-service-name {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8D8D8D;
+    line-height: 21px;
+    text-align: left;
+}
+
+#lda #lda-services-panel .ld-service-list span.ld-service-name i.fa-th {
+    margin-right: 5px;
+}
+
+#lda #lda-services-panel .ld-service-list span.ld-service-name i.fa {
+    margin-right: 5px;
+    cursor: move;
+}
+
+#lda #lda-services-panel .ld-service-details.col-lg-9,
+#lda #ld-settings .ld-setting-details.col-lg-9 {
+    padding: 0px !important;
+}
+
+#lda #lda-services-panel .ld-services-right-details .col-md-12 {
+    padding: 0px 0px 0px 15px;
+}
+
+#lda #lda-services-panel .ld-services-right-details i.fa-th-list {
+    margin-right: 5px;
+    cursor: move;
+    position: relative;
+    top: 2px;
+}
+
+#lda #lda-services-panel .ld-service-list ul li.active span.ld-service-name {
+    color: #495861 !important;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3c4c5c;
+    line-height: 21px;
+    text-align: left;
+}
+
+#lda #lda-services-panel .ld-service-list .ld-left-service {
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+
+/* new style for service list left side */
+
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li,
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 24px;
+}
+
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li a:focus,
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li a:focus,
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li a:hover,
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li a:hover,
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li:hover,
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li:hover,
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li,
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li.active {
+    background: #dctctb;
+}
+
+#lda #lda-services-panel .ld-service-list .ld-left-services li.ld-left-service-menu-li .ld-service-sort-icon,
+#lda #lda-services-panel .ld-service-list .ld-left-service li.ld-left-service-menu-li .ld-service-sort-icon {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 5px 0px;
+    cursor: move;
+}
+
+#lda #lda-services-panel .ld-service-list .nav li a {
+    padding: 3px 5px;
+}
+
+#lda #lda-services-panel .ld-service-list .popover {
+    max-width: 220px;
+    width: 200px;
+}
+
+#lda #lda-services-panel .ld-services-right-details ul li .popover {
+    width: 170px;
+    max-width: 200px;
+}
+
+#lda #lda-services-panel .ld-service-list h3.popover-title {
+    background-color: #F8F8F8;
+    font-size: 15px;
+    padding: 8px 14px;
+    display: block;
+}
+
+
+/* right side services details and top menu */
+
+#lda #lda-services-panel .ld-service-top-header {
+    line-height: 30px;
+    color: #3C4C5C;
+    font-size: 24px;
+    float: left;
+    width: 100%;
+    padding: 15px 0px 10px 15px;
+}
+
+#lda #lda-services-panel .ld-service-top-header .popover {
+    max-width: 230px;
+    width: 200px;
+}
+
+#lda #lda-services-panel .ld-service-right-details {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#lda #lda-services-panel .ld-service-right-menu {
+    text-transform: uppercase;
+}
+
+#lda #lda-services-panel table tr td {
+    padding: 5px;
+}
+
+
+/* right side listing new style */
+
+#lda #lda-services-panel .panel-heading .panel-title {
+    line-height: 30px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-services-panel .ld-services-panel .panel-title span.ld-service-title-name {
+    width: 83%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 33px;
+}
+
+#lda #lda-services-panel .panel-heading .panel-title .badge {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 0px 5px !important;
+    -webkit-border-radius: 0px 5px !important;
+    -o-border-radius: 0px 5px !important;
+    -ms-border-radius: 0px 5px !important;
+    border-radius: 0px 5px !important;
+    margin: 0px 5px;
+}
+
+#lda #lda-services-panel .panel .collapse.in {
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-services-panel .ld-service-new-service li .lda-col1 {
+    min-width: 20px !important;
+    position: relative;
+    right: 10px;
+}
+
+#lda #lda-services-panel .panel-heading .panel-title .ld-service-time-main,
+#lda #lda-services-panel .panel-heading .panel-title .ld-service-price-main {
+    font-size: 13px;
+}
+
+#lda #lda-services-panel .ld-create-service-table {
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-services-panel .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+
+#lda #lda-services-panel .ld-all-service-category .bootstrap-select {
+    width: 350px;
+}
+
+#lda #lda-services-panel .ld-service-duration .bootstrap-select {
+    width: 110px;
+}
+
+#lda #lda-services-panel .ld-service-duration .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda #lda-services-panel .ld-service-duration .dropdown-menu>li>a:focus,
+#lda #lda-services-panel .ld-service-duration .dropdown-menu>li>a:hover {
+    background: transparent linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -webkit-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -moz-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    background: transparent -o-linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%) repeat scroll 0% 0%;
+    color: #FFF;
+}
+
+
+/* service listing */
+
+#lda #lda-services-panel .ld-add-new-service {
+    display: none;
+}
+
+#lda #lda-services-panel ul#sortable-services li {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#lda #lda-services-panel .bootstrap-select.btn-group .dropdown-menu li {
+    margin-bottom: unset !important;
+}
+
+#lda #lda-services-panel ul.ld-select-staff-ul li span.ld-service-provider-list {
+    width: 73%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 34px;
+}
+
+
+/****************************/
+
+
+/*   Settings page  */
+
+
+/* setting page enable disable custom style */
+
+#lda #lda-clean-services-panel table label.ctoggle-large .toggle,
+#lda #ld-settings table .form-group label.ctoggle-large .toggle,
+#lda #ld-settings table .form-group label.ctoggle-postal-code .toggle,
+#lda #ld-settings table .form-group label.ctoggle-tax-vat .toggle,
+#lda #ld-settings table .form-group label.ctoggle-patial-deposit .toggle,
+#lda #ld-settings table .form-group label.ctoggle-cancel-policy .toggle,
+#lda #ld-settings table .form-group label.ctoggle-multiple-booking-same-time .toggle,
+#lda #ld-settings table .form-group label.ctoggle-star_show_on_front .toggle,
+#lda #ld-settings table .form-group label.ctoggle-appointment-auto-confirm .toggle,
+#lda #ld-settings table .form-group label.ctoggle-allow-dc-terms-condition .toggle,
+#lda #ld-settings table .form-group label.ctoggle-allow-dc-privacy_policy .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_allow_front_desc .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_pickup_delivery_add .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_self_service .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_pickup_delivery .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_subheaders .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_vc_status .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld_p_status .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-pay-locally .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-paypal-checkout .toggle,
+#lda #ld-settings table .form-group label.ctoggle-paypal-guest-payment .toggle,
+#lda #ld-settings table .form-group label.ctoggle-paypal-test-mode .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-authorizedotnet-payment-checkout .toggle,
+#lda #ld-settings table .form-group label.ctoggle-authorize-sandbox-mode .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-stripe-payment-checkout .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-twocheckout-payment-checkout .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-payumoney-payment-checkout .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-bank-transfer-payment-checkout .toggle,
+#lda #ld-settings table .form-group label.ctoggle-2checkout-test-mode .toggle,
+#lda #ld-settings table .form-group label.ctoggle-admin-email-notification .toggle,
+#lda #ld-settings table .form-group label.ctoggle-client-email-notification .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-sms-service-ena-dis .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-sms-noti-twilio .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-client-status .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-admin-status .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-sms-noti-plivo .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-client-status-plivo .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-admin-status-plivo .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-staff-status-plivo .toggle,
+#lda #ld-settings table .form-group label.ctoggle-ld-sms-reminder-staff-status .toggle,
+#lda #ld-settings .panel-heading label.ctoggle-frequently-discount .toggle,
+#lda #ld-settings #manageable-form-fields ul.ld-labels-error-ul li.ld-labels-error-listing label.ctoggle .toggle {
+    min-width: 72px !important;
+}
+
+#lda #ld-settings table .form-group label.ld_ext_payments_list_css .toggle,
+#lda #ld-settings .panel-heading label.ld_ext_payments_list_css .toggle {
+    min-width: 72px !important;
+}
+
+
+/*
+#lda #ld-settings .tab-content > .tab-pane,
+#lda #ld-settings .tab-content > .tab-pane.fade,
+#lda #ld-settings .tab-content > .tab-pane.fade.in{
+	visibility:hidden;
+	display: block !important;
+	height: 0px;
+}
+#lda #ld-settings .tab-content > .active.in,
+#lda #ld-settings .tab-content > .tab-pane.fade.active,
+#lda #ld-settings .tab-content > .tab-pane.fade.active.in{
+	visibility:visible !important;
+	height: 100%;
+} */
+
+#lda #ld-settings #sms-reminder .ld-all-sms-gateway-main .ld-sms-gateway .panel-heading {
+    float: left;
+    width: 100%;
+}
+
+
+/* common style for form-group */
+
+#lda #ld-settings #general-setting .form-group,
+#lda #ld-settings #appearance-setting .form-group,
+#lda #ld-settings #payment-setting .ld-payment-methods .form-group,
+#lda #ld-settings #sms-reminder .ld-sms-reminder-input .form-group,
+#lda #ld-settings #labels .ld-labels-all .form-group {
+    margin-bottom: 1px;
+    float: left;
+    margin-right: 5px;
+}
+
+#lda #ld-settings #general-setting .panel,
+#lda #ld-settings #payment-setting .panel,
+#lda #ld-settings #email-setting .panel {
+    box-shadow: unset;
+    border: 0px none;
+    margin-bottom: 10px;
+}
+
+#lda #ld-settings .panel-heading.lda-top-right {
+    color: #333;
+    background-color: #F5F5F5;
+    border-color: #8D8D8D;
+    position: fixed;
+    width: 75%;
+    float: left;
+    z-index: 99;
+}
+
+#lda #ld-settings .panel-heading {
+    color: #333;
+    background-color: #F5F5F5;
+    border-color: #8D8D8D;
+}
+
+#lda #ld-settings #email-setting .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 194px;
+}
+
+#lda #ld-settings .panel-heading h1.panel-title {
+    text-align: left;
+}
+
+#lda .panel-heading h1.panel-title {
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+}
+
+#lda #ld-settings .panel-heading .lda-setting-fix-btn {
+    position: absolute;
+    right: 50px;
+    top: 5px;
+}
+
+#lda #ld-settings .lda-panel-default {
+    background: #F1F5F7;
+    margin-top: 20px;
+    border-color: #8D8D8D;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#lda #ld-settings .lda-panel-default .panel-body {
+    padding: 15px;
+}
+
+#lda #ld-staff-dashboard .staff-dashboard.ld-left-menu,
+#lda #ld-settings .ld-left-menu {
+    background: #E1E7EB none repeat scroll 0% 0%;
+    position: relative;
+    height: calc(100vh - 120px);
+    overflow: auto;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lda #ld-settings .ld-setting-details {
+    position: relative;
+    height: calc(100vh - 120px);
+    overflow: auto;
+}
+
+#lda #ld-staff-dashboard .ld-left-menu ul li:after,
+#lda #ld-settings .ld-left-menu ul li:after {
+    content: "";
+    height: 1px;
+    background-color: rgb(215, 215, 215);
+    text-align: center;
+    clear: left;
+    width: 100%;
+    display: block;
+}
+
+#lda #ld-staff-dashboard .ld-left-menu ul li a {
+    font-size: 15px !important;
+}
+
+#lda #ld-staff-dashboard .ld-left-menu ul li a,
+#lda #ld-settings .ld-left-menu ul li a {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8D8D8D;
+    line-height: 20px;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+#lda #ld-settings .ld-left-menu ul li.active a,
+#lda #ld-staff-dashboard .ld-left-menu ul li.active a,
+#lda #ld-settings .ld-left-menu ul li a:hover,
+#lda #ld-staff-dashboard .ld-left-menu ul li a:hover {
+    background-color: #F1F5F7 !important;
+    color: #495861 !important;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    color: #C1C8CD;
+    line-height: 20px;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+#lda #ld-settings .ld-setting-details table.ld-common-table tr td {
+    padding: 5px;
+}
+
+#lda #ld-settings .ld-general-setting .ld-setting-menu {
+    color: #000;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#lda #ld-settings #general-setting .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+#lda #ld-settings #general-setting .bootstrap-select.btn-group .dropdown-menu {
+    max-height: 260px !important;
+    overflow: hidden;
+}
+
+#lda #ld-settings #general-setting .bootstrap-select.btn-group .dropdown-menu li a {
+    line-height: 23px;
+    padding: 5px 14px;
+}
+
+#lda #ld-settings #general-setting .ld-tax-vat-input-container,
+#lda #ld-settings #general-setting .multiple-booking-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    line-height: 36px;
+}
+
+#lda #ld-settings #general-setting i.ld-tax-percent {
+    position: relative;
+    top: 1px;
+    right: -5px;
+}
+
+#lda #ld-settings #general-setting .mycollapse_patial-deposit i.fa-percent {
+    position: relative;
+    top: 1px;
+    right: -5px;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list li.ld-partial-li-width {
+    width: 20%;
+}
+
+#lda .ld-custom-radio ul.ld-radio-list li.ld-privacy-policy-li-width {
+    width: 90%;
+}
+
+#lda #ld-settings #general-setting .ld-tax-vat-input-container .ld-partial-input-per {
+    float: left;
+}
+
+#lda #ld-settings #general-setting i.ld-partial-deposit-percent {
+    position: relative;
+    top: 1px;
+    right: -5px;
+}
+
+#lda #ld-settings #general-setting .ld-partial-deposit-input-container .ld-partial-input-per {
+    float: left;
+}
+
+
+/* setting > appearance setting css */
+
+#lda #ld-settings #appearance-setting .minicolors .minicolors-input,
+#lda #ld-settings .minicolors-theme-bootstrap .minicolors-swatch {
+    cursor: pointer;
+}
+
+
+/* setting > payment gateways setting css */
+
+#lda #ld-settings #payment-setting .ld-all-payments-main .ld-payment-methods,
+#lda #ld-settings #sms-reminder .ld-all-sms-gateway-main .ld-sms-gateway {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+/*
+#lda #ld-settings #sms-reminder .ld-all-sms-gateway-main .ld-sms-gateway .panel-heading {
+    float: left;
+    width: 100%;
+}
+*/
+
+#lda #ld-settings #payment-setting .panel-group {
+    margin-bottom: 0px !important;
+}
+
+#lda #ld-settings #payment-setting .ld-paypal-setting-warning {
+    position: relative;
+    float: left;
+    display: inline-block;
+    bottom: 7px;
+}
+
+#lda #ld-settings #payment-setting .ld-all-payments-main .ld-payment-methods img.lda-paypal-img-payments,
+#lda #ld-settings #payment-setting .ld-all-payments-main .ld-payment-methods img.lda-authorize-img-payments,
+#lda #ld-settings #sms-reminder .ld-all-sms-gateway-main .ld-sms-gateway img.lda-sms-gateway-img {
+    position: relative;
+    left: 5px;
+}
+
+#lda #ld-settings #payment-setting .ld-all-payments-main .ld-payment-methods .payment-icon {
+    position: relative;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#lda #ld-settings #payment-setting .ld-all-payments-main .ld-payment-methods .payment-icon i.fa.fa-money {
+    font-size: 26px;
+}
+
+#lda #ld-settings #payment-setting .ld-payment-methods .ld-enable-disable-right.ld-pay-locally {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    right: 0px;
+}
+
+#lda #ld-settings #payment-setting .ld-payment-methods .ld-enable-disable-right {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    right: 0px;
+}
+
+
+/* super admin email template editing */
+
+#lda #lda-email-templates .tab-content ul li {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#lda #lda-email-templates .tab-content ul li .panel-heading {
+    float: left;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#lda #lda-email-templates ul li .panel-body .ld-email-temp-collapse-div.col-md-12 {
+    padding: 10px 0px;
+}
+
+#lda #lda-email-templates ul li .panel-body {
+    padding: 0px 5px 10px 5px;
+}
+
+#lda #lda-email-templates ul li span.ld-template-name {
+    width: 85%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 34px;
+    text-overflow: ellipsis;
+}
+
+#lda #lda-email-templates .tab-content {
+    padding: 0px 15px;
+}
+
+#lda #lda-email-templates .tab-content #client-email-template h4.panel-title,
+#lda #lda-email-templates .tab-content #admin-provider-email-template h4.panel-title {
+    line-height: 26px;
+}
+
+#lda #lda-email-templates .tab-content #client-email-template #accordion,
+#lda #lda-email-templates .tab-content #admin-provider-email-template #accordion {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-email-templates .tab-content #client-email-template #accordion .ld-email-panel,
+#lda #lda-email-templates .tab-content #admin-provider-email-template #accordion .ld-email-panel {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 5px 0px !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#lda #lda-email-templates .tab-content #client-email-template #accordion .ld-email-panel .panel-heading,
+#lda #lda-email-templates .tab-content #admin-provider-email-template #accordion .ld-email-panel .panel-heading {
+    padding: 5px 10px;
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-email-templates .panel-collapse table.ld-email-table tr td {
+    padding: 5px;
+}
+
+#lda #lda-email-templates #client-email-template input[type="checkbox"],
+#lda #lda-email-templates #admin-provider-email-template input[type="checkbox"] {
+    display: none;
+}
+
+#lda #lda-email-templates .ld-yes-no-email-right {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    right: 0px;
+}
+
+#lda #lda-email-templates #client-email-template .ld-email-panel .panel-heading .ld-toggle,
+#lda #lda-email-templates #admin-provider-email-template .ld-email-panel .panel-heading .ld-toggle {
+    margin: 4px 4px 4px 0px;
+    position: relative;
+    bottom: 4px;
+}
+
+
+/* setting > Email,sms template setting css */
+
+#lda #email-template ul li .panel-body .ld-email-temp-collapse-div.np,
+#lda #sms-template ul li .panel-body .ld-sms-temp-collapse-div.np {
+    padding: 15px 0 !important;
+}
+
+#lda #ld-settings #email-template .tab-content ul li,
+#lda #ld-settings #sms-template .tab-content ul li {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#lda #ld-settings #email-template ul li .panel-heading,
+#lda #ld-settings #sms-template ul li .panel-heading {
+    float: left;
+    width: 100%;
+}
+
+#lda #ld-settings #email-template ul li .panel-heading,
+#lda #ld-settings #sms-template ul li .panel-heading {
+    padding: 5px 10px;
+}
+
+#lda #ld-settings #email-template .tab-content,
+#lda #ld-settings #sms-template .tab-content {
+    padding: 0px 15px;
+}
+
+#lda #ld-settings #email-template .tab-content #client-email-template h4.panel-title,
+#lda #ld-settings #email-template .tab-content #admin-email-template h4.panel-title,
+#lda #ld-settings #email-template .tab-content #staff-email-template h4.panel-title,
+#lda #ld-settings #sms-template .tab-content #client-sms-template h4.panel-title,
+#lda #ld-settings #sms-template .tab-content #admin-sms-template h4.panel-title {
+    line-height: 34px;
+}
+
+#lda #ld-settings #email-template .tab-content #client-email-template #accordion,
+#lda #ld-settings #email-template .tab-content #admin-provider-email-template #accordion,
+#lda #ld-settings #sms-template .tab-content #client-sms-template #accordion,
+#lda #ld-settings #sms-template .tab-content #admin-sms-template #accordion {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+}
+
+#lda #ld-settings #email-template .tab-content #client-email-template #accordion .ld-email-panel,
+#lda #ld-settings #email-template .tab-content #admin-email-template #accordion .ld-email-panel,
+#lda #ld-settings #sms-template .tab-content #client-sms-template #accordion .ld-sms-panel,
+#lda #ld-settings #sms-template .tab-content #admin-sms-template #accordion .ld-sms-panel {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 5px 0px !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#lda #ld-settings #email-template .tab-content #client-email-template #accordion .ld-email-panel .panel-heading,
+#lda #ld-settings #email-template .tab-content #admin-email-template #accordion .ld-email-panel .panel-heading,
+#lda #ld-settings #sms-template .tab-content #client-sms-template #accordion .ld-sms-panel .panel-heading,
+#lda #ld-settings #sms-template .tab-content #admin-sms-template #accordion .ld-sms-panel .panel-heading {
+    padding: 5px 10px;
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+#lda #ld-settings #email-template .panel-collapse table.ld-email-table tr td,
+#lda #ld-settings #sms-template .panel-collapse table.ld-email-table tr td {
+    padding: 5px;
+}
+
+#lda #ld-settings #client-email-template input[type="checkbox"],
+#lda #ld-settings #admin-email-template input[type="checkbox"],
+#lda #ld-settings #client-sms-template input[type="checkbox"],
+#lda #ld-settings #admin-sms-template input[type="checkbox"] {
+    display: none;
+}
+
+#lda #ld-settings #email-template .ld-yes-no-email-right,
+#lda #ld-settings #sms-template .ld-yes-no-sms-right {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    line-height: 26px;
+    margin-right: 10px;
+}
+
+#lda #ld-settings #client-email-template .ld-email-panel .panel-heading .ld-toggle,
+#lda #ld-settings #admin-email-template .ld-email-panel .panel-heading .ld-toggle,
+#lda #ld-settings #client-sms-template .ld-sms-panel .panel-heading .ld-toggle,
+#lda #ld-settings #admin-sms-template .ld-sms-panel .panel-heading .ld-toggle {
+    margin: 4px 4px 4px 0px;
+    position: relative;
+    bottom: 4px;
+}
+
+
+/* settings > sms settings */
+
+#lda #ld-settings #sms-reminder .ld-enable-disable-right {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    right: 0px;
+}
+
+#lda #ld-settings #sms-reminder .ld-sms-gateway .ld-enable-disable-right {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    right: 0px;
+}
+
+#lda #ld-settings #sms-reminder .panel-heading .panel-title a.ld-tooltip-link {
+    top: 0px;
+}
+
+#lda #ld-settings #sms-reminder td#hr {
+    padding: 0px;
+}
+
+#lda #ld-settings #sms-reminder .ld-sms-reminder-input table tbody th {
+    padding: 8px;
+}
+
+
+/* settings > Labels settings */
+
+#lda #ld-settings #labels table tbody th {
+    padding: 8px;
+}
+
+
+/* settings > manage form fields settings */
+
+#lda #ld-settings #manage-form-fields table tbody tr td div.form-group {
+    margin: 0px;
+}
+
+#lda #ld-settings #manage-form-fields .ld-min-max {
+    width: 125px;
+}
+
+#lda #ld-settings #manage-form-fields .ld-min-max i.fa {
+    margin: 0px;
+}
+
+#lda #ld-settings #manage-form-fields .ld-min-max .ld-btn-text {
+    width: 40%;
+    cursor: not-allowed;
+    pointer-events: none;
+    margin: 0px;
+    border-color: #cfcfcf;
+    text-align: center;
+    font-size: 15px;
+    height: 34px;
+    padding: 5px 10px;
+}
+
+
+/* settings > Promocode settings */
+
+#lda #ld-settings #promocode .btn-xs.ld-edit-coupon {
+    float: left;
+}
+
+#lda #ld-settings #promocode .ld-edit-coupon,
+#lda #ld-settings #promocode .delete_coupon {
+    position: relative;
+    cursor: pointer;
+}
+
+#lda #ld-settings #promocode .tab-content {
+    padding: 0px 15px;
+}
+
+#lda #ld-settings #promocode .panel-collapse table.ld-email-table tr td {
+    padding: 5px;
+}
+
+#lda #ld-settings #promocode #datepicker {
+    width: 180px;
+    margin: 0 20px 20px 20px;
+}
+
+#lda #ld-settings #promocode #datepicker>span:hover {
+    cursor: pointer;
+}
+
+#lda #ld-settings #promocode .panel-default #add-new-promocode .table-responsive {
+    min-height: 700px;
+}
+
+
+/* settings > custom form fields checkbox style */
+
+#lda .frmb .checkbox input[type="checkbox"] {
+    position: unset !important;
+    margin: unset !important;
+}
+
+#lda .frmb .hidden {
+    display: block !important;
+}
+
+
+/* front tool tips */
+
+#lda #ld-settings #front_tooltips .ld-enable-disable-right {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    right: 0px;
+}
+
+
+/****************************/
+
+
+/****************************/
+
+
+/*  payments  */
+
+#lda #lda-payments .tab-content {
+    padding: 15px;
+}
+
+#lda #lda-payments .dataTables_wrapper .dataTables_length {
+    margin: 5px 0px;
+    float: left;
+}
+
+#lda #lda-payments div.dataTables_wrapper div.dataTables_filter {
+    margin: 5px 0px;
+    float: right;
+}
+
+#lda #lda-payments div.dt-buttons {
+    text-align: center;
+    float: none;
+}
+
+
+/****************************/
+
+
+/****************************/
+
+
+/*  Export  */
+
+#lda #lda-export-details .tab-content {
+    padding: 15px;
+}
+
+#lda #lda-export-details .dataTables_wrapper .dataTables_length,
+#lda #lda-export-details div.dataTables_wrapper div.dataTables_filter {
+    margin: 5px 0px;
+}
+
+#lda #lda-export-details div.dt-buttons,
+#lda #lda-staff-panel div.dt-buttons {
+    text-align: center;
+    float: none;
+}
+
+#lda #manageable-form-fields .spinner {
+    width: 120px;
+}
+
+#lda #manageable-form-fields .spinner input {
+    text-align: center;
+    padding: 5px 33px;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal {
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal>.btn {
+    display: block;
+    float: none;
+    width: 30%;
+    max-width: 30%;
+    padding: 8px;
+    position: absolute;
+    border-radius: 0;
+    z-index: 9;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal>.btn.ld-addition-btn {
+    right: 0;
+    top: 0;
+    float: right;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal>.btn.ld-subtraction-btn {
+    left: 0;
+    top: 0;
+    float: left;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal>.btn.ld-subtraction-btn {
+    border-radius: 4px 0 0 4px;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal>.btn.ld-addition-btn {
+    border-radius: 0 4px 4px 0;
+}
+
+#lda #manageable-form-fields .input-group-btn-horizontal i {}
+
+
+/****************************/
+
+
+/****************************/
+
+
+/*  Customers listing  */
+
+#lda #lda-customers-listing .dataTables_wrapper .dataTables_length {
+    margin: 5px 0px;
+    float: left;
+}
+
+#lda #lda-customers-listing div.dataTables_wrapper div.dataTables_filter {
+    margin: 5px 0px;
+    float: right;
+}
+
+#lda div.dataTables_wrapper div.dataTables_filter input {
+    width: auto !important;
+}
+
+#lda #lda-customers-listing div.dt-buttons,
+#lda #registered-client-booking-details_wrapper div.dt-buttons {
+    text-align: center;
+    float: none;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child {
+    padding-left: 30px !important;
+}
+
+#lda .dataTables_wrapper .dataTables_length,
+#lda div.dataTables_wrapper div.dataTables_filter {
+    margin-bottom: 15px !important;
+    margin-top: 30px !important;
+}
+
+#lda .dataTables_wrapper .dataTables_length#ld-staff-member-offtime-list_length,
+#lda div.dataTables_wrapper div#ld-staff-member-offtime-list_filter.dataTables_filter {
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    float: left;
+}
+
+#lda div.dataTables_wrapper div.dataTables_paginate {
+    float: right;
+    z-index: 99;
+}
+
+#lda #lda-customers-listing .booking-details-modal .modal-lg {
+    width: 84%;
+}
+
+#lda #lda-customers-listing .booking-details-modal .close {
+    float: right;
+    font-size: 50px;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+
+#lda #lda-customers-listing td.ld-bookings-td {
+    position: relative;
+}
+
+#lda #lda-customers-listing tr.child td li span.dtr-data .badge,
+#lda #lda-customers-listing td.ld-bookings-td .badge,
+#lda #lda-customers-listing td .all_cus_show_click .badge,
+#lda #lda-customers-listing td .sms_cus_show_click .badge,
+#lda #lda-customers-listing #registered-customers-listing .badge,
+#lda #lda-user-profile tr.child td li span.dtr-data .badge,
+#lda #lda-user-profile td a.ld-my-booking-user .badge,
+#lda #lda-user-appointments td a.myappointment_popup .badge,
+#lda #lda-export-details #services-info-export .ld-bookings-td span.badge {
+    padding: 3px 5px !important;
+    border: 1px solid !important;
+    top: initial !important;
+    margin: -11px 0px !important;
+    position: absolute !important;
+}
+
+#lda #lda-user-appointments h4.header4 {
+    margin-bottom: 30px;
+}
+
+
+/****** Style Star Rating Widget *****/
+
+#lda #user-booking-details #service-review .modal-md {
+    width: 350px !important;
+}
+
+#lda #user-booking-details #service-review textarea.review-textarea {
+    width: 100% !important;
+}
+
+#lda #lda-user-appointments .rating {
+    border: none;
+    float: right;
+    margin-left: 10px;
+    position: relative;
+    top: -7px;
+}
+
+#lda #lda-user-appointments .rating>input {
+    display: none;
+}
+
+#lda #lda-user-appointments .rating>label:before {
+    margin: 0px 3px;
+    font-size: 25px;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+#lda #lda-user-appointments .rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+#lda #lda-user-appointments .rating>label {
+    color: #ddd;
+    float: right;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+#lda #lda-user-appointments .rating>input:checked~label,
+
+/* show gold star when clicked */
+
+#lda #lda-user-appointments .rating:not(:checked)>label:hover,
+
+/* hover current star */
+
+#lda #lda-user-appointments .rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+
+/* hover previous stars in list */
+
+#lda #lda-user-appointments .rating>input:checked+label:hover,
+
+/* hover current star when changing rating */
+
+#lda #lda-user-appointments .rating>input:checked~label:hover,
+#lda #lda-user-appointments .rating>label:hover~input:checked~label,
+
+/* lighten current selection */
+
+#lda #lda-user-appointments .rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
+
+#lda #lda-user-profile .col-md-10 .col-md-6 {
+    min-height: 67px;
+}
+
+
+/* dynamic with coding on login and rest password and registration	html{		background: url('../images/bg.jpg') center center/cover no-repeat fixed;		width: 100%;		height: 100%;	}  */
+
+#lda #lda-login .lda-main-login,
+#lda #lda-reset-pass .lda-main-reset-pass,
+#lda #lda-register .lda-main-register {
+    float: left;
+    display: inline-table;
+}
+
+#lda #lda-login .lda-main-login,
+#lda #lda-reset-pass .lda-main-reset-pass,
+#lda #lda-register .lda-main-register {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+}
+
+#lda #lda-login .lda-login-form,
+#lda #lda-reset-pass .lda-reset-pass-form,
+#lda #lda-register .lda-register-form {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 91.66667%;
+    max-width: 43em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    position: relative;
+    background: #fff;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    color: #7e7975;
+    margin-top: 30px;
+}
+
+#lda #lda-login .lda-login-form .form-container,
+#lda #lda-reset-pass .lda-reset-pass-form .form-container {
+    width: 83.3333%;
+    float: none;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 21em;
+    padding-top: 1.2em;
+}
+
+#lda #lda-register .lda-register-form .form-container-register {
+    width: 95.3333%;
+    float: none;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+    padding-top: 10px;
+}
+
+
+/* new input style */
+
+#lda #lda-login .new-input,
+#lda #lda-register .new-input,
+#lda #lda-reset-pass .new-input {
+    position: relative;
+}
+
+#lda #lda-login .ld-input-field:focus,
+#lda #lda-register .ld-input-field:focus,
+#lda #lda-reset-pass .ld-input-field:focus {
+    outline: none;
+}
+
+#lda #lda-login .ld-input-label,
+#lda #lda-register .ld-input-label,
+#lda #lda-reset-pass .ld-input-label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #696969;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#lda #lda-login .ld-input-label-content,
+#lda #lda-register .ld-input-label-content,
+#lda #lda-reset-pass .ld-input-label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+
+#lda #lda-login .ld-input-field-cta,
+#lda #lda-register .ld-input-field-cta,
+#lda #lda-reset-pass .ld-input-field-cta {
+    width: 100%;
+    border: 1px solid #ccc;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    -o-transition: background-color 0.25s, border-color 0.25s;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+#lda #lda-login .ld-input-label-cta,
+#lda #lda-register .ld-input-label-cta,
+#lda #lda-reset-pass .ld-input-label-cta {
+    width: 89%;
+    text-align: left;
+    position: absolute;
+    bottom: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    padding: 0 12px;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 2em, 0);
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -webkit-transform 0.25s ease-in-out;
+    -o-transition: -webkit-transform 0.25s ease-in-out;
+    -ms-transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+#lda #lda-login .ld-input-label-content-cta,
+#lda #lda-register .ld-input-label-content-cta,
+#lda #lda-reset-pass .ld-input-label-content-cta {
+    color: #8B8C8B;
+    padding: 3px 0;
+    line-height: 12px;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -webkit-transform 0.25s ease-in-out;
+    -o-transition: -webkit-transform 0.25s ease-in-out;
+    -ms-transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+#lda #lda-login .ld-input-label-content-cta:after,
+#lda #lda-register .ld-input-label-content-cta:after,
+#lda #lda-reset-pass .ld-input-label-content-cta:after {
+    content: attr(data-content);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+    padding: 0.1em 0;
+    font-size: 14px;
+}
+
+#lda #lda-login .ld-input-field-cta:focus+.ld-input-label-cta,
+#lda #lda-register .ld-input-field-cta:focus+.ld-input-label-cta,
+#lda #lda-reset-pass .ld-input-field-cta:focus+.ld-input-label-cta,
+#lda #lda-login .lda-input-filled .ld-input-label-cta,
+#lda #lda-register .lda-input-filled .ld-input-label-cta,
+#lda #lda-reset-pass .lda-input-filled .ld-input-label-cta {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#lda #lda-login .ld-input-field-cta:focus+.ld-input-label-cta .ld-input-label-content-cta,
+#lda #lda-register .ld-input-field-cta:focus+.ld-input-label-cta .ld-input-label-content-cta,
+#lda #lda-reset-pass .ld-input-field-cta:focus+.ld-input-label-cta .ld-input-label-content-cta,
+#lda #lda-login .lda-input-filled .ld-input-label-content-cta,
+#lda #lda-register .lda-input-filled .ld-input-label-content-cta,
+#lda #lda-reset-pass .lda-input-filled .ld-input-label-content-cta {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+#lda #lda-login .ld-input-field-cta:focus+.ld-input-field-cta,
+#lda #lda-register .ld-input-field-cta:focus+.ld-input-field-cta,
+#lda #lda-reset-pass .ld-input-field-cta:focus+.ld-input-field-cta,
+#lda #lda-login .lda-input-filled .ld-input-field-cta,
+#lda #lda-register .lda-input-filled .ld-input-field-cta,
+#lda #lda-reset-pass .lda-input-filled .ld-input-field-cta {
+    background-color: transparent;
+    border-color: #66afe9;
+}
+
+#lda #lda-login .lda-login-form .form-container .lda-form,
+#lda #lda-register .lda-register-form .form-container-register .lda-form.register-group,
+#lda #lda-reset-pass .lda-reset-pass-form .form-container .lda-form {
+    display: inline-block;
+    width: 100%;
+}
+
+#lda #lda-login .lda-login-form .form-container .lda-form .btn,
+#lda #lda-register .lda-register-form .form-container-register .lda-form .btn {
+    padding: 6px 0px;
+}
+
+#lda #lda-register .lda-register-form .form-container-register .lda-form {
+    display: inline-block;
+}
+
+#lda #lda-login .lda-login-form .form-container .lda-form .login-btn,
+#lda #lda-register .lda-register-form .form-container-register .lda-form .register-btn,
+#lda #lda-reset-pass .lda-reset-pass-form .form-container .lda-form .email-btn {
+    line-height: 32px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 400 !important;
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+#lda #lda-login .lda-login-form .form-control,
+#lda #lda-register .lda-register-form .form-control,
+#lda #lda-reset-pass .lda-reset-pass-form .form-control {
+    box-shadow: unset;
+    height: 38px;
+}
+
+#lda #lda-login .lda-login-form ul.ld-checkbox-list,
+#lda #lda-register .lda-register-form ul.ld-checkbox-list {
+    padding: 0px;
+    margin: 0px;
+}
+
+#lda #lda-login .lda-login-form .ld-show-pass,
+#lda #lda-register .lda-register-form .ld-show-pass {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+#lda #lda-register .lda-register-form .ld-show-pass {
+    right: 15px;
+}
+
+#lda #lda-login .lda-login-form .ld-show-pass input[type="checkbox"]+label .fa,
+#lda #lda-register .lda-register-form .ld-show-pass input[type="checkbox"]+label .fa {
+    cursor: pointer;
+}
+
+#lda #lda-login .lda-login-form .ld-show-pass input[type="checkbox"],
+#lda #lda-register .lda-register-form .ld-show-pass input[type="checkbox"] {
+    display: none;
+}
+
+#lda #lda-login .lda-login-form .ld-show-pass input[type="checkbox"]:checked+label .fa:before,
+#lda #lda-register .lda-register-form .ld-show-pass input[type="checkbox"]:checked+label .fa:before {
+    content: "\f06e";
+}
+
+#lda #lda-login .lda-login-form ul.ld-checkbox-list label span,
+#lda #lda-register .lda-register-form ul.ld-checkbox-list label span {
+    margin-right: 5px !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+#lda #lda-login .lda-login-form ul.ld-checkbox-list input[type="checkbox"]:checked+label span:before,
+#lda #lda-register .lda-register-form ul.ld-checkbox-list input[type="checkbox"]:checked+label span:before {
+    width: 11px;
+    height: 11px;
+}
+
+
+/* stripe payment inputs */
+
+#lda #lda-register .col-xs-5 {
+    width: 44.66666667% !important;
+}
+
+#lda #lda-register .ld-stripe-wrapper {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#lda #lda-register .ld-stripe-wrapper .ld-stripe-header {
+    font-size: 18px;
+    padding: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#lda #lda-register .ld-stripe-wrapper .ld-stripe-header .ld-card-header {
+    float: left;
+    line-height: 25px;
+}
+
+#lda #lda-register .ld-stripe-card {
+    width: 100%;
+    float: left;
+}
+
+#lda #lda-register .ld-stripe-card .ld-card-input-container {
+    float: left;
+    margin-top: 13px;
+    position: relative;
+}
+
+#lda #lda-register .ld-card-sample-img .float-right {
+    float: right;
+}
+
+
+/* admin/staff profile page */
+
+#lda #lda-profile .ld-left-menu,
+#lda #lda-crm .ld-left-menu,
+#lda #lda-user-profile .ld-left-menu {
+    background: #E1E7EB none repeat scroll 0% 0%;
+    height: 100%;
+    min-width: 170px;
+    color: #8D8D8D;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lda #lda-profile .ld-left-menu ul li a,
+#lda #lda-crm .ld-left-menu ul li a,
+#lda #lda-user-profile .ld-left-menu ul li a {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8D8D8D;
+    line-height: 20px;
+    padding: 18px 0px;
+    text-align: center;
+}
+
+#lda #lda-profile .ld-left-menu ul li.active a,
+#lda #lda-profile .ld-left-menu ul li a:hover {
+    background-color: #F1F5F7 !important;
+    color: #495861 !important;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    color: #C1C8CD;
+    line-height: 20px;
+    padding: 18px 0px;
+    text-align: center;
+}
+
+
+/* admin profile WIDGET new css */
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code {
+    margin: 0;
+    padding-left: 27px;
+    padding-right: 36px;
+    list-style-type: none;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li.embed-code-li {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    border-top: 1px solid #d7d7d7;
+    color: #314451;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
+    float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#lda #lda-profile .lda-embed-button .ld-custom-new-radio ul.ld-new-radio-list {
+    width: 100%;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li .col-xs-5 {
+    width: 41.66666667% !important;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li span.ld-embed-count {
+    margin-left: -25px;
+    padding-top: 1px;
+    padding-bottom: 4px;
+    display: inline-block;
+    float: left;
+    color: #5cb85c;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li .show-on-btn-click ol.second-child-ol {
+    border-top: 0 none !important;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li div.ld-embed-code {
+    padding-top: 5px;
+    border-top: thin dashed rgba(215, 215, 215, 0.75);
+    font-size: 17px;
+    margin: 15px 0 15px;
+    float: left;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li.embed-code-li .single-location-dropdown,
+#lda #lda-profile .lda-embed-button ol.ld-embed-code li.embed-code-li .show-on-btn-click {
+    display: none;
+    float: left;
+    width: 100%;
+}
+
+
+/* New page What's New? style Latest */
+
+#lda #lda-laundry-welcome .lda-welcome-main {
+    padding: 13px 40px 10px 30px;
+    position: relative;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-main .ld-into-text {
+    margin-bottom: 20px;
+    line-height: 28px;
+    font-size: 17px;
+    margin-right: 360px;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-main .ld-laundry-badge {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-main .ld-laundry-badge img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner {
+    position: relative;
+    overflow: auto;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 30px 30px 30px 20px;
+    background: #fff;
+    border-color: #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    float: left;
+    width: 100%;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-articles .panel-heading,
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-help .panel-heading,
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .panel-heading {
+    padding: 15px 15px 5px 15px;
+    position: relative;
+    z-index: 3;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px !important;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-articles ul.lda-articles-ul {
+    margin: 10px 10px 10px 0;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-articles ul.lda-articles-ul li {
+    line-height: 16px;
+    list-style-type: none;
+    padding: 0 0 6px;
+    margin-bottom: 5px;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-articles ul.lda-articles-ul li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .ld-changelog-menu ul {
+    margin-bottom: 20px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .ld-changelog-menu ul li {
+    float: left;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .ld-changelog-menu ul li a {
+    text-align: right;
+    font-size: 13px;
+    display: block;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+    margin: 0px;
+    padding: 15px 20px;
+    background: #f8f8f8;
+    font-weight: 400;
+    color: #2c3e50;
+    transition: all 300ms linear 0s;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .ld-changelog-menu ul li.active a {
+    border-color: #21c2f8;
+    color: #21c2f8;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog .ld-changelog-menu ul li.active a {
+    background-color: #fff;
+    border: 1px solid;
+    border-right: none;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul {
+    margin: 10px 10px 10px 0;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul li:first-child {
+    border: none;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul li {
+    line-height: 20px;
+    position: relative;
+    margin-right: 0;
+    border-top: thin dashed rgba(215, 215, 215, 0.75);
+    padding: 8px 0 5px 75px;
+    margin-bottom: 3px;
+}
+
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul li span.ld-added,
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul li span.ld-improved,
+#lda #lda-laundry-welcome .lda-welcome-inner .lda-cleato-changelog ul.lda-changelog-ul li span.ld-fixed {
+    font-style: normal;
+    display: inline-block;
+    text-transform: uppercase;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    min-width: 70px;
+    font-size: 11px;
+    line-height: 18px;
+    height: 18px;
+    padding: 0 4px;
+    margin: 0;
+}
+
+#lda #lda-payments span.ld-payment-img {
+    padding-left: 5px;
+}
+
+#lda #lda-payments span.ld-payment-img img {
+    display: inline-block;
+    width: 12px;
+    height: auto;
+}
+
+#lda .panel-collapse.collapse {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+
+/* back to top */
+
+#lda a.lda-back-to-top {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    z-index: 999;
+    right: 30px;
+    bottom: 30px;
+}
+
+#lda a.lda-back-to-top i.icon-arrow-up-circle {
+    position: absolute;
+    right: 9px;
+    top: 13px;
+    font-size: 30px;
+}
+
+
+/* Loader css */
+
+.loader2 {
+    color: #ffffff;
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@-webkit-keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@-webkit-keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.ld_custom_css_loader_preview_overlay {
+    background-color: #000;
+    display: inline-block;
+    opacity: 0.5;
+    border-radius: 5px;
+    margin-left: 2%;
+    padding: 20px !important;
+}
+
+#ld-calendar-all .ld-manual-booking-modal .modal-body {
+    float: left;
+    width: 100%;
+    display: inline-block;
+    max-height: 490px;
+    overflow: auto;
+    overflow-x: none;
+}
+
+
+/******Addons Page CSS*******/
+
+#addons_page h1,
+#addons_page h2,
+#addons_page h3,
+#addons_page h4,
+#addons_page h5,
+#addons_page h6,
+#addons_page a,
+#addons_page label {}
+
+#addons_page p,
+#addons_page section {}
+
+#addons_page section {
+    text-align: center;
+}
+
+#addons_page a {
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+#addons_page .main_head {
+    color: #07ba57;
+    text-align: center;
+    line-height: 36px;
+}
+
+#addons_page .head_line {
+    background-color: #3d3d3d;
+    height: 2px;
+    width: 110px;
+    margin: 10px auto;
+    display: block;
+}
+
+#addons_page .addon_box {
+    height: auto;
+    background-color: #fff;
+    float: left;
+    margin: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 20px;
+    transition: all 0.5s;
+    overflow: hidden;
+    width: 100%;
+}
+
+#addons_page .addon_box h3 {
+    color: #0073aa;
+    margin-bottom: 0px !important;
+    margin-top: -20px !important;
+}
+
+#addons_page .addon_box label {
+    color: #0073aa;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#addons_page .addon_box span {
+    color: #000 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+#addons_page .addon_box h4 {
+    color: #0073aa;
+    text-align: right;
+}
+
+#addons_page .addon_box p {
+    padding: 10px 0;
+}
+
+#addons_page .addon_box strong {
+    color: #000;
+    font-weight: 400;
+    font-size: 18px !important;
+    padding-bottom: 15px;
+}
+
+#addons_page .addon_box:hover {
+    box-shadow: -1px 3px 9px 1px #cbcbcb;
+}
+
+#addons_page .addon_box img {
+    margin: 40px auto 20px auto;
+    display: block;
+}
+
+#addons_page .addon_box .version_no {
+    position: relative;
+    right: -221px;
+    top: -2px;
+    padding: 5px 60px;
+    transform: rotate(45deg);
+    background-color: #ff7600;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 1px 2px 2px 0px #cbcbcb;
+    transition: all 0.5s;
+    width: 181px;
+}
+
+#addons_page .addon_box .version_full {
+    right: -710px !important;
+}
+
+#addons_page .addon_box .version_no:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+#addons_page .ld_set_installed_color a,
+#addons_page .ld_set_installed_color {
+    color: #12bf47 !important;
+}
+
+#addons_page .ld_set_delete_ext_color a,
+#addons_page .ld_set_delete_ext_color {
+    color: red !important;
+}
+
+#addons_page .Extension_verify_purchasecode_modal h4.modal-title {
+    color: unset !important;
+    text-align: unset !important;
+}
+
+#addons_page .Extension_verify_purchasecode_modal label.purchase_code_err {
+    color: red !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+    text-align: unset !important;
+    margin: unset !important;
+    display: none !important;
+}
+
+#addons_page .ld_three_column {
+    float: right;
+    margin-left: 15px;
+}
+
+#lda .input_danger {
+    border-color: red;
+}
+
+#lda #special_offer .special_offer_check .toggle {
+    min-width: 80px !important;
+}
+
+#lda .language_status {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+}
+
+#lda .modal-body .custom_textarea_feedback {
+    display: inherit;
+    width: 100%;
+    min-height: 90px;
+}
+
+
+/************************Laundry**********************/
+
+#lda .ld-clean-service-details .spinner {
+    width: 120px;
+}
+
+#lda .ld-clean-service-details .spinner input {
+    text-align: center;
+    padding: 1px;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal {
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal>.btn {
+    display: block;
+    float: none;
+    width: 30%;
+    max-width: 30%;
+    padding: 9px;
+    position: absolute;
+    border-radius: 0;
+    z-index: 9;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal>.btn.ld-addition {
+    right: 0;
+    top: 0;
+    float: right;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal>.btn.ld-subtraction {
+    left: 0;
+    top: 0;
+    float: left;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal>.btn.ld-subtraction {
+    border-radius: 4px 0 0 4px;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal>.btn.ld-addition {
+    border-radius: 0 4px 4px 0;
+}
+
+#lda .ld-clean-service-details .input-group-btn-horizontal i {}
+
+#lda-main-navigation .container {
+    width: 1190px;
+}
+
+#lda .special-text-w {
+    width: 400px;
+}
+
+.edit_customer_detail {
+    display: flex !important;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ld-settings .ld-setting-details table.ld-common-table tr td {
+    padding: 5px;
+}
+
+#myModal_reschedual {
+    z-index: 9999 !important;
+}
+
+.mydatepicker_appointment {
+    z-index: 9999 !important;
+}

@@ -1,0 +1,149 @@
+/*
+Laundry Installer
+*/
+
+html{
+	
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+body {
+	font-family: 'Open Sans';
+}
+#ldi  { 	
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 24px;
+}	 
+#ldi{
+	
+}
+#ldi{
+ content: "";
+ position: absolute;
+ background: rgba(0, 0, 0, 0.25)  url(../images/ld-grid.png) repeat 0 0;
+ display: block;
+ min-height: 100%;
+ width: 100%;
+ z-index: -1;
+}
+	
+.ldi-wrapper{
+	clear: both;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#ldi .modal-body,
+#ldi .np{
+	padding: 0px;
+}
+#ldi label{
+	font-weight: normal;
+	font-size: 13px;
+}
+
+#ldi .ldi-inner{
+	background: #ffffff;
+	margin: 10px;
+	position: relative;
+	top: 50px;
+    float: left;
+ width: 100%;
+}
+#ldi .ldi-inner #laundry-installer{
+	float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+	-webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    padding: 30px;
+}
+
+#ldi #sidebar{
+	float: left;
+	padding: 20px 0 0 0;
+}
+#ldi #sidebar .ldi-progress{
+	padding-right: 20px;
+}
+#ldi ul.left-menu{
+	border-right: 1px solid #e5e5e5;
+	padding: 3px 0 0 0;
+	list-style: none;
+	margin-left: 10px;
+	margin-right: 5px;
+	line-height: 17px;
+	height: 300px;
+}
+#ldi ul.left-menu li.aldive{
+	font-size: 18px;
+	font-weight: bold;
+}
+#ldi ul.left-menu li{
+	line-height: 26px;
+	padding-left: 0px;
+	font-size: 17px;
+}
+#ldi .modal-content,
+#ldi .modal-body,
+#ldi .modal-footer{
+	float: left;
+	width: 100%;
+}
+
+#ldi #ldi-content{
+	background: #ffffff;
+	float: left;
+	padding: 20px 0 10px 0;
+}
+#ldi #ldi-content .ldi-progress-bar{
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#ldi #ldi-content .ldi-progress-bar b{
+	font-size: 20px;
+}
+#ldi #ldi-content .ldi-info{
+	line-height: 22px;
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+#ldi #ldi-content table.ldi-table{
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+#ldi #ldi-content table.ldi-table h3{
+	margin-top: 13px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#ldi #ldi-content a.ldi-tooltip-link{
+	position: absolute;
+	right: -5px;
+	top: 5px;
+	font-size: 16px;
+}
+#ldi #ldi-content .tooltip{
+	width: 180px;
+}
+#ldi #ldi-content #purchase-code-verification{
+	display: none;
+}
+#ldi ul.left-menu li.active{
+	font-size: 18px;
+	font-weight: bold;
+}
+#ldi .return_url a.btn{
+	width: 40%;
+	padding: 15px;
+	margin: 20px;
+	color: white;
+  background-color: #187d90;
+}

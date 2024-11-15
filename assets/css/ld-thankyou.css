@@ -1,0 +1,127 @@
+/*
+Laundry - Thanktyou front
+*/
+	html{
+		
+		-webkit-font-smoothing: antialiased !important;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	}
+	#ld  { 	
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 24px;
+	}	
+	.ld-wrapper{width: 100%;
+		margin: 0px;
+		padding: 0px;
+		float: left;
+		display: block;
+		min-height: 100%;
+		position: relative;
+	}
+	#ld .ld-container {
+		width: 1170px;
+		margin: 0px auto;
+		position: relative;
+		clear: both;
+	}
+	#ld .booking-tankyou{
+		width: 40%;
+		text-align: center;
+		padding: 40px 30px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-o-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		box-shadow: 0px 1px 8px #aeaeae;
+		color: #373854;
+		position : fixed;
+		top: 50% !important;
+		left: 50% !important;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+		
+	#ld h1.header1{
+		font-size: 34px;
+		font-weight: normal;
+		color: inherit;
+		margin:0;
+		padding: 10px 0px 15px;
+		
+	}
+	#ld p.thankyou-text{
+		font-size: 18px;
+		font-weight: normal;
+		color: inherit;
+		margin:0;
+		line-height: 1.2;
+	}
+	#ld h3.header3{
+		font-size: 24px;
+		font-weight: normal;
+		color: inherit;
+		margin:0;
+		padding: 5px 0px 8px;
+	}
+	#ld .ld-col-12{
+		width: 100%;
+		float: left;
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+	#ld .ld-col-12 .ld-button:hover{
+		background-color: #11A351;
+	}
+	#ld .ld-col-12 .ld-button{
+		color: #FFFFFF;
+		background-color: #4CAF50;
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.3333333;
+		text-decoration: none;
+	}
+	
+	
+	
+	
+	
+/* Responsive design */	
+/* Desktops and laptops ----------- */
+@media only screen and (min-width:1025px) and (max-width:1270px) {
+	#ld .ld-container{width: 900px;}
+	#bt .booking-tankyou {width: 50%;}
+}	
+/*----*****---- << iPads (portrait and landscape)  >> ----*****----*/	
+ @media only screen and (min-width:768px) and (max-width:1024px) {
+	#ld .ld-container{width: 720px;}	
+	#ld .booking-tankyou {width: 60%;}
+}	
+@media only screen and (max-width:767px) {
+	#ld .ld-container{width: 460px;}
+	#ld .booking-tankyou{width: 75%;padding: 30px 20px;}
+	#ld h1.header1 {font-size: 28px;}
+	#ld h3.header3 {font-size: 18px;}	
+	#ld p.thankyou-text {font-size: 15px;}
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	#ld .ld-container{width: 300px;}
+	#ld .booking-tankyou{width: 86%;padding: 20px 10px;}
+	#ld h1.header1 {font-size: 24px;}
+	#ld h3.header3 {font-size: 16px;}
+	#ld p.thankyou-text {font-size: 13px;}
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 319px) {
+	#ld .ld-container{width: 250px;}
+	#ld .booking-tankyou{width: 86%;padding: 20px 10px;}
+	#ld h1.header1 {font-size: 24px;}
+	#ld h3.header3 {font-size: 16px;}
+	#ld p.thankyou-text {font-size: 13px;}
+}

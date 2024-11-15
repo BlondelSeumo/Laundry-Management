@@ -1,0 +1,495 @@
+/*
+Laundry : RTL style front
+*/
+#ld  {
+	direction: rtl;
+}
+
+	/* ct common css */
+	.ld-xs-1,
+	.ld-xs-10,
+	.ld-xs-11,
+	.ld-xs-12,
+	.ld-xs-2,
+	.ld-xs-3,
+	.ld-xs-4,
+	.ld-xs-5,
+	.ld-xs-6,
+	.ld-xs-7,
+	.ld-xs-8,
+	.ld-xs-9 ,
+	.ld-sm-1,
+	.ld-sm-10,
+	.ld-sm-11,
+	.ld-sm-12,
+	.ld-sm-2,
+	.ld-sm-3,
+	.ld-sm-4,
+	.ld-sm-5,
+	.ld-sm-6,
+	.ld-sm-7,
+	.ld-sm-8,
+	.ld-sm-9 ,
+	.ld-md-1,
+	.ld-md-10,
+	.ld-md-11,
+	.ld-md-12,
+	.ld-md-2,
+	.ld-md-3,
+	.ld-md-4,
+	.ld-md-5,
+	.ld-md-6,
+	.ld-md-7,
+	.ld-md-8,
+	.ld-md-9,
+	.ld-lg-1,
+	.ld-lg-10,
+	.ld-lg-11,
+	.ld-lg-12,
+	.ld-lg-2,
+	.ld-lg-3,
+	.ld-lg-4,
+	.ld-lg-5,
+	.ld-lg-6,
+	.ld-lg-7,
+	.ld-lg-8,
+	.ld-lg-9,
+	#ld .pull-left,
+	#ld .float-left,
+	#ld .f-l,
+	#ld .fl,
+	#ld  input[type="submit"],
+	#ld  input[type="reset"],
+	#ld  input[type="button"],
+	#ld  button, 
+	#ld  .ld-error-msg,
+	#ld .ld-custom-checkbox ul.ld-checkbox-list,
+	#ld .ld-custom-checkbox  ul.ld-checkbox-list li,
+	#ld .ld-custom-radio ul.ld-radio-list li,
+	#ld .ld-scroll-meth-unit,
+	/* ct main css */
+	.ld-wrapper,
+	#ld .ld-common-box,
+	#ld .ld-list-services ul.services-list li .service-name,
+	#ld .ld-extra-services-list ul.addon-service-list li .addon-name,
+	#ld .ld-main-left .ld-list-header,
+	#ld .ld-list-services ul.services-list li .ld-service .ld-service-img,
+	#ld .ld-address-area-main .ld-address-bar,
+	#ld .ld-address-area-main .ld-postal-code,
+	#ld .ld-address-area-main .ld-area-type,
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6,
+	#ld .ld-address-area-main .ld-area-type .area-header,
+	#ld #ld-type-2.services-list-dropdown,
+	#ld #ld-type-method.services-method-list-dropdown,
+	#ld #ld-duration-main.ld-service-duration .ld-duration-list .duration-box,
+	#ld .common-selection-main,
+	#ld #ld-meth-unit-type-2.ld-meth-unit-count .ld-bedrooms .bedroom-box,
+	#ld #ld-meth-unit-type-2.ld-meth-unit-count .ld-bathrooms .bathroom-box,
+	#ld #ld-meth-unit-type-3 .ld-meth-unit-count .ld-inner-box,
+	#ld .ld-extra-services-list ul.addon-service-list li .ld-addon-ser .ld-addon-img,
+	#ld .ld-extra-services-list .ld-addon-extra-count .ld-common-addon-list .ld-addon-box,
+	#ld .ld-addon-count .ld-meth-unit-count .ld-inner-box,
+	#ld #ld-calendar-full,
+	#ld .calendar-wrapper,
+	#ld .dates,
+	#ld .today-date, 
+	#ld .calendar-body .ld-show-time .time-slot-container .ld-slot-legends ul.ld-legends-ul li, 
+	#ld .calendar-body .ld-show-time,
+	#ld .calendar-body .ld-show-time .time-slot-container,
+	#ld .calendar-body .ld-show-time .time-slot-container ul.time-slot-ul,
+	#ld .calendar-body .ld-show-time .time-slot-container ul li.time-slot,
+	#ld .ld-user-info-main .ld-main-details .ld-login-exist .ld-login-existing,
+	#ld .ld-user-info-main .ld-main-details .ld-login-exist .ld-custom-radio,
+	#ld .ld-user-info-main .ld-main-details .ld-new-user-details,
+	#ld .ld-user-info-main .ld-main-details .ld-login-exist .ld-new-user-details,
+	#ld .ld-user-info-main .ld-main-details .ld-login-exist .ld-login-existing,
+	#ld .ld-user-info-main .ld-main-details .ld-peronal-details,
+	#ld #ld-payments .payment-methods,
+	#ld #ld-pay-methods.common-payment-style,
+	#ld #card-payment-fields,
+	#ld #card-payment-fields .ld-header-bg h4.header4,
+	#ld  .cc-lb,
+	#ld .ld-cancel-policy-main,
+	#ld .ld-cancel-policy,
+	#ld .ld-cancel-policy p,
+	#ld .main-inner-container,
+	#ld .info-main-inner,	
+	#ld .cart-items-main,	
+	#ld .ld-main-right .ld-form-rown,
+	#ld .ld-cart-wrapper .ld-cart-label-common,
+	#ld .ld-discount-coupons,
+	#ld .ld-display-coupon-code,
+	#ld .ld-discount-coupons .ld-coupon-input,
+	#ld .ld-partial-amount-wrapper,
+	#ld .ld-partial-amount-wrapper .ld-partial-amount-message,
+	#ld .ld-addons-list-main ul.ld-addon-items-list,
+	#ld .ld-addons-list-main ul.ld-addon-items-list li,
+	#ld .features-list,
+	#ld .ld-main-left .ld-list-header {
+		float: right !important;
+	}	
+
+	#ld .ld-form-row,
+	#ld label{
+		float: right !important;
+	}	
+	#ld label.error:before{
+		right: 20px;
+		left: 0px;
+	}
+	
+	#ld .show-error input[type="text"],
+	#ld .show-error input[type="password"],
+	#ld .show-error input[type="email"],
+	#ld .show-error input[type="url"],
+	#ld .show-error input[type="tel"],
+	#ld .show-error input[type="number"],
+	#ld .show-error input[type="range"],
+	#ld .show-error input[type="date"],
+	#ld .show-error textarea,
+	#ld .show-error select{
+		background: #fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj4KICA8cGF0aCBmaWxsPSIjREYzMzIwIiBkPSJNMTAsMTMuNmMtMC4zLDAtMC42LTAuMy0wLjYtMC42VjdjMC0wLjMsMC4zLTAuNiwwLjYtMC42czAuNiwwLjMsMC42LDAuNnY2IEMxMC42LDEzLjMsMTAuMywxMy42LDEwLDEzLjZ6IiAvPgogIDxwYXRoIGZpbGw9IiNERjMzMjAiIGQ9Ik0xMCwxNi42Yy0wLjMsMC0wLjYtMC4zLTAuNi0wLjZ2LTAuNWMwLTAuMywwLjMtMC42LDAuNi0wLjZzMC42LDAuMywwLjYsMC42VjE2IEMxMC42LDE2LjMsMTAuMywxNi42LDEwLDE2LjZ6IiAvPgogIDxwYXRoIGZpbGw9IiNERjMzMjAiIGQ9Ik0xMCwxLjljMC42LDAsMC45LDAuMywxLjEsMC42bDcuNiwxMy40bDAuMSwwLjJjMC4xLDAuMywwLjIsMC40LDAuMiwwLjYgYzAsMC4yLTAuMSwwLjQtMC4yLDAuNmwwLDBsMCwwLjFDMTguNSwxNy43LDE4LDE4LDE3LjYsMThIMi40Yy0wLjQsMC0wLjktMC4zLTEuMS0wLjdsMC0wLjFsMCwwQzEuMSwxNywxLDE2LjksMSwxNi41IGMwLTAuMSwwLjItMC41LDAuMy0wLjZMOC44LDIuNUM5LDIuMSw5LjUsMS45LDEwLDEuOSBNMTAsMC45QzkuMiwwLjksOC40LDEuMyw4LDJMMC40LDE1LjRDMC4yLDE1LjgsMCwxNi4yLDAsMTYuNSBjMCwwLjUsMC4xLDAuOSwwLjQsMS4zYzAuNCwwLjcsMS4yLDEuMiwyLDEuMmgxNS4yYzAuOCwwLDEuNi0wLjUsMi0xLjJjMC4zLTAuNCwwLjQtMC44LDAuNC0xLjJjMC0wLjUtMC4yLTAuOC0wLjQtMS4yTDExLjksMiBDMTEuNCwxLjMsMTAuNywwLjksMTAsMC45TDEwLDAuOXoiIC8+Cjwvc3ZnPgo=") calc(100% - 95%) 50% no-repeat !important;
+		padding-left: 45px;
+		padding-right: 15px;
+	}
+	
+	
+	#ld .pull-right,
+	#ld .float-right,
+	#ld .today-date .ld-selected-date-view{
+		float: left !important;
+	}
+	
+	#ld .ld-custom-radio ul.ld-radio-list label span{
+		margin-left: 10px;
+		margin-right: 0px;
+	}	
+	#ld #ld-type-2 .ld-service-list i.icon-settings,
+	#ld #ld-type-2 .ld-service-list img.service-image{
+		margin-left: 12px;
+		margin-right: 0px;
+	}
+
+	#ld label.error,
+	#ld .ta-left,
+	#ld  label.ld-error,
+	#ld .today-date,
+	#ld #ld-price-scroll .ld-text,
+	#ld .ld-partial-amount-wrapper .ld-partial-amount-message{
+		text-align:right;
+	}
+	#ld #ld-price-scroll .ld-text span.cart_date{
+		float: right;
+	}
+
+	#ld .ta-right {
+		text-align:left;
+	}
+	
+
+	#ld  label.ld-error{
+		right: 0;
+	}
+	#ld .ld-main-left .ld-location-header .ld-mybookings {
+		left: 20px;
+		right: unset;
+	}
+	
+	#ld #ld-type-2 .service-is .ld-service-list:after,
+	#ld #ld-type-method .service-method-is .ld-service-method-list:after{
+		left: 2%;
+		right: unset;
+	}	
+	#ld .ld-bathrooms .common-selection-main:after,
+	#ld .ld-bedrooms .common-selection-main:after{
+		left: 5%;
+		right: unset;
+	}
+	#ld .ld-extra-services-list ul.addon-service-list li .ld-addon-ser .addon-price{
+		left: 7px;
+		right: unset;
+	}
+	#ld .ld-extra-services-list ul.addon-service-list li .common-selection-main.addon-select .selected-is .data-list:after{
+		left: 0%;
+		right: unset;
+	}
+	#ld .today-date a.ld-button{
+		right: 6%;
+		left: unset;
+		left: unset;
+	}
+	#ld .calendar-body .ld-show-time .time-slot-container .ld-slot-legends .ld-slot-legends-box{
+		margin-left: 3px;
+		margin-right: unset;
+	}
+	
+	#ld .ld-custom-radio  ul.ld-radio-list{
+		float: right;
+	}
+	#ld .ld-address-area-main .ld-area-type span.area-type{
+		padding-right: 5px;
+		padding-left: unset;
+	}
+	.ld-lg-pull-1{
+		right: 0% !important;
+	}
+	#ld #ld-type-2 .service-selection-main .ld-services-dropdown,
+	#ld #ld-type-method .ld-services-method-dropdown,
+	#ld .common-selection-main .common-data-dropdown{
+		border-radius: 4px 4px 0 0;
+	}	
+	#ld .ld-extra-services-list ul.addon-service-list li label span:before{
+		border-right: 140px solid transparent;
+		left: 0px;
+		right: unset;
+		border-left: unset;
+	}	
+	#ld .ld-addon-count{
+		right: 0;
+		float: right;
+	}	
+	#ld .ld-discount-list ul.ld-discount-often li .ld-btn-discount span{
+		text-align: right;
+	}	
+	#ld .ld-discount-list ul.ld-discount-often li label .ld-discount-check{
+		left: 0;
+	}	
+	/* calendar next and previous date */
+	#ld .calendar-wrapper .calendar-header a.previous-date{
+		right: 0px;
+		left: unset;
+	}	
+	#ld .calendar-wrapper .calendar-header a.next-date{
+		left: 0px;
+		right: unset;
+	}	
+	#ld .calendar-body .ld-day,
+	#ld .calendar-body .ld-week {
+		float: right;
+		border-left: thin solid #e5e5e5;
+		border-right: 0px none;
+	}	
+	#ld .calendar-body .ld-day.ld-last-day,
+	#ld .calendar-body .ld-week.ld-last-week{
+		border-left: 0px;
+	}	
+	#ld .calendar-wrapper .calendar-header .icon-arrow-right:before{
+		content: "\e605" !important;
+		font-family: 'simple-line-icons';
+	}
+	#ld .calendar-wrapper .calendar-header .icon-arrow-left:before {
+		content: "\e606" !important;
+		font-family: 'simple-line-icons';
+	}
+	/* calendar front time legends */
+	#ld .calendar-body .ld-show-time .time-slot-container .ld-slot-legends{
+		float: left;
+		-webkit-border-radius: 0px 0px 5px 5px;
+		-moz-border-radius: 0px 0px 5px 5px;
+		-o-border-radius: 0px 0px 5px 5px;
+		-ms-border-radius: 0px 0px 5px 5px;
+		border-radius: 0px 0px 5px 5px;
+	}	
+	#ld .today-date .ld-selected-date-view span.ld-date-selected{
+		padding-left: 15px;
+		padding-right: unset;
+	}	
+ 
+	#ld .ld-user-info-main .ld-main-details .ld-peronal-details .ld-option-select:before{
+		left: 2%;
+		right: unset;
+	}
+	#ld #ld-payments .ld-custom-radio ul.ld-radio-list li{
+		padding-right: 0px;
+		padding-left: unset;
+	}	
+	#ld #ld-payments .ld-paypal-image{
+		right: 8px;
+		left: unset;
+	}	
+	#ld #card-payment-fields .ld-exp-month{
+		margin-left:3px;
+		margin-right: unset;
+		text-align:right;	
+	}	
+	#ld #card-payment-fields .ld-exp-year{
+		margin-right: 3px;
+		margin-left: unset;
+		text-align: right;
+	}	
+	#ld i.icon-credit-card,
+	#ld i.icon-lock,
+	#ld i.icon-calendar{
+		right: 13px;
+		left: unset;
+	}
+	#ld .card{
+		left: 13px;
+		right: unset;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		float: right;
+		right: 30px;
+		left: unset;
+	}
+	#ld .show-more-toggler:after{
+		right: 2%;
+		left: unset;
+	}
+	#ld ul.bullet-more{
+		padding-right: 1.25em;
+		padding-left: 0.9375em;
+	}	
+	#ld #ld-price-scroll .ld-image{
+		padding-left:10px;
+		padding-right: unset;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-common{
+		text-align: right;
+		padding-right: 3px;
+		padding-left: unset;
+	}
+	#ld .ld-cart-wrapper .ld-cart-label-total-amount{
+		float: right;
+		text-align: right;
+		padding-right: 3px;
+		padding-left: unset;
+	}
+	.intl-tel-input input, .intl-tel-input input[type="text"], .intl-tel-input input[type="tel"]{
+		padding-right: 45px !important;
+		padding-left: unset !important;
+		margin-left: 0;
+		margin-right: unset;
+	}
+	.intl-tel-input .selected-flag{
+		padding: 0 8px 0 0 !important;
+	}
+	.intl-tel-input .selected-flag .iti-arrow{
+		left: 4px;
+		right: unset !important;
+	}
+	#ld .ld-cart-wrapper .ld-cart-amount-common,
+	#ld .ld-cart-wrapper .ld-cart-total-amount{
+		float: left;
+		text-align: left;
+	}
+	#ld .ld-discount-coupons a.ld-apply-coupon{
+		float: left;
+		left: 20px;
+		right: unset;
+	}
+	#ld .ld-display-coupon-code .ld-coupon-value-main img{
+		left: 6px;
+	}
+	#ld .ld-addons-list-main ul.ld-addon-items-list li .ld-item {
+		float: right;
+		padding-left: 5px;
+	}
+	#ld .ld-addons-list-main ul.ld-addon-items-list li .ld-price {
+		float: right;
+		text-align: left;
+	}
+	#ld a.ld-back-to-top{
+		left: 30px;
+	}
+	#ld a.ld-back-to-top i.icon-arrow-up{
+		left: 12px;
+	}
+	
+/***************************/
+/*** front RTL style *******/
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6 {
+		float: right;	
+	}	
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img{
+		right: 0px;	
+		left: unset !important;	
+	}
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	#ld .today-date a.ld-button{
+		right: 13%;
+		left: unset !important;
+	}
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	#ld .today-date a.ld-button{
+		right: 0;
+		left: unset !important;
+	}
+}	
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+	#ld .today-date a.ld-button{
+		right: 13%;
+		left: unset !important;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	#ld .today-date a.ld-button{
+		right: 0;
+		left: unset !important ;
+	}
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-device-width : 767px) {
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6,
+	#ld .ld-meth-unit-count .ld-inner-box .ld-btn-group.ld-sm-6{
+		float: right;
+	}	
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		right: 110px;
+		left: unset !important;
+	}	
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6,
+	#ld .today-date .ld-selected-date-view span.ld-date-selected,
+	#ld .today-date .ld-selected-date-view span.ld-time-selected{
+		float: right;
+	}
+	#ld .today-date a.ld-button{
+		right: 0;
+		left: unset !important;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		right: 110px;
+		left: unset !important;
+	}	
+	#ld a.ld-back-to-top{
+		left: 5px;
+		right: unset !important;
+	}	
+}	
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-device-width: 319px) {
+	#ld .ld-address-area-main .ld-address-bar h6.header6,
+	#ld .ld-address-area-main .ld-postal-code h6.header6,
+	#ld .today-date .ld-selected-date-view span.ld-date-selected,
+	#ld .today-date .ld-selected-date-view span.ld-time-selected{
+		float: right;
+	}
+	#ld .today-date a.ld-button{
+		right: 0;
+		left: unset !important;
+	}
+	#ld #card-payment-fields .ld-lock-image .ld-lock-img {
+		right: 110px;
+		left: unset !important;
+	}	
+	#ld a.ld-back-to-top{
+		left: 5px;
+		right: unset !important;
+	}
+}	

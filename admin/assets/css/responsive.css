@@ -1,0 +1,314 @@
+@media only screen and (max-width: 575px){
+
+.gj-picker.gj-picker-bootstrap.timepicker{
+	top: 20% !important;
+}
+#pos .main-body .responsive-center{    justify-content: center;
+    display: grid;}
+
+#pos .main-body .fixed-sidebar-wrap {
+    position: unset;
+   
+}
+#pos .main-body .common-heading h4 {
+font-size: 16px;}
+#pos .main-body .summary-imgaset {
+    width: 34px;
+}
+#pos .main-body .summery-name span {
+    font-size: 14px;
+}
+#pos .main-body .common-icone-counter {
+    font-size: 14px;
+}
+#pos .main-body .costom-common-btn{
+    
+    padding: 4px 6px 4px 6px;
+   
+}
+#pos .main-body .summery-price p {
+    margin: 8px 0px;
+    font-weight: 400;
+    font-size: 14px;
+}
+#pos .main-body .set-delete-btn {
+    font-size: 18px;
+    color: #fff;
+}
+#pos .main-body .delete-btn {
+   
+    padding: 2px 5px;
+    width: 22PX;
+    HEIGHT: 22px;
+  
+    margin: 8px 0px 0px 18px;
+   
+}
+#pos .main-body .bottom-cart-main-detilas {
+    position: relative;
+    top: 40px;
+    bottom: 0px;
+    padding-bottom: 50px;
+}
+#pos .main-body .bottom-all-btns-main .custom-btn {
+   
+    font-size: 15px;
+    margin-right: 16px;
+    display: table-footer-group;
+    align-items: center;
+    margin-right: 14px;
+    margin-top: 14px;
+}
+#pos .main-body .bottom-all-btns-main .print-custom {
+    padding: 6px 24px 6px 24px;
+}
+#pos .main-body .bottom-all-btns-main .btn-icone-size {
+    width: 22px;
+    margin-left: 10px;
+}
+#pos .main-body .bottom-all-btns-main .pay-custom {
+    padding: 6px 10px 6px 10px;
+    background-color: #5E98C2;
+    border-color: #5E98C2;
+}
+#pos .main-body .bottom-all-btns-main .schedule-custom {
+    padding: 6px 10px 6px 10px;
+}
+#pos .main-body .sub-amount h4 {
+    font-size: 18px;
+ 
+}
+#pos .main-body .sub-total h4 {
+    font-size: 18px;
+    
+}
+#pos .main-body .responsive-ul-set{justify-content: center; display:grid;}
+#pos .main-body .common-product {
+    margin-bottom: 14px;
+		margin-right: 0px;
+}
+#pos .main-body .main-content-div {
+    padding-top: 16px;
+    display: flow-root;
+    align-items: center;
+}
+#pos .main-body .common-div-product h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+		margin-right: 14px;
+}
+#pos .main-body .main-product-search{display: flex;
+    justify-content: center;}
+#pos .main-body .icone-search {
+    
+    font-size: 20px;}
+#pos .main-body .pickup-main-div{display: grid;
+    justify-content: center;}
+}
+@media (min-width: 375px) and (max-width: 425px){
+#pos .main-body .bottom-all-btns-main .schedule-custom {
+    padding: 6px 8px 6px 8px;
+}
+#pos .main-body .bottom-all-btns-main .print-custom {
+    padding: 6px 14px 6px 14px;
+}
+#pos .main-body .bottom-all-btns-main .pay-custom {
+    padding: 6px 8px 6px 8px;
+    background-color: #5E98C2;
+    border-color: #5E98C2;
+}
+#pos .main-body .bottom-all-btns-main .custom-btn {
+    font-size: 14px;
+    margin-right: 8px;
+    margin-top: 14px;
+}
+#pos .main-body .common-icone-counter {
+    font-size: 13px;
+}
+#pos .main-body .costom-common-btn {
+    padding: 2px 4px 2px 4px;
+}
+#pos .main-body .counter-number {
+    text-align: center;
+    border: unset;
+    font-weight: 700;
+    padding: 0px;
+}
+#pos .main-body .common-summery .input-group{margin-top:6px;}
+#pos .main-body .summery-name span {
+    margin-left: 4px;
+}
+#pos .main-body .delete-btn {
+    margin: 6px 0px 0px 10px;
+}
+#pos .main-body .common-div-product h3 {
+    font-size: 16px;
+    
+}
+}
+@media (min-width: 320px) and (max-width: 374px){
+#pos .main-body .common-div-product h3 {
+    font-size: 14px;
+    margin-right: 7px;
+}
+#pos .main-body .summary-imgaset {
+    width: 30px;
+}
+#pos .main-body .summery-name span {
+    font-size: 12px;
+		margin-left:2px;
+}
+#pos .main-body .responsive-padding-small{padding:0px;}
+#pos .main-body .counter-number {
+  padding:0px;
+}
+#pos .main-body .summery-price p {
+    margin: 5px 6px;
+    font-weight: 400;
+    font-size: 12px;
+}
+#pos .main-body .delete-btn {
+    padding: 2px 5px;
+    width: 20PX;
+    HEIGHT: 20px;
+    margin: 3px 0px 0px 5px;
+}
+#pos .main-body .set-delete-btn {
+    font-size: 16px;
+    color: #fff;
+}
+#pos .main-body .common-icone-counter {
+    font-size: 12px;
+}
+#pos .main-body .costom-common-btn {
+    padding: 3px 5px 3px 5px;
+}
+#pos .main-body .common-heading h4 {
+    font-size: 14px;
+}
+#pos .main-body .pick-up-time{font-size:13px;}
+#pos .main-body .fixed-sidebar-wrap {
+  
+    padding: 0px;
+}
+#pos .main-body .bottom-all-btns-main .schedule-custom {
+    padding: 6px 8px 6px 8px;
+}
+#pos .main-body .bottom-all-btns-main .custom-btn {
+    font-size: 14px;
+   
+    margin-right: 8px;
+   
+}
+#pos .main-body .bottom-all-btns-main .pay-custom {
+padding: 6px 6px 6px 6px;}
+#pos .main-body .bottom-all-btns-main .btn-icone-size {
+    width: 20px;
+    margin-left: 8px;
+}
+#pos .main-body .bottom-all-btns-main .print-custom {
+    padding: 6px 8px 6px 8px;
+}
+}
+@media (min-width: 576px) and (max-width: 767px){
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+	#pos .main-body .fixed-sidebar-wrap {
+    position: unset;
+}
+.gj-picker.gj-picker-bootstrap.timepicker{
+	top: 20% !important;
+}
+
+#pos .main-body .common-product h3 {
+    font-size: 16px;
+    color: #436F8F;
+    margin: 6px 4px;
+}
+#pos .main-body .common-product {
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+#pos .main-body .common-width {
+    width: 30px;
+}
+.tab-card-header > .nav-tabs > li > a {
+    border: 0;
+    margin-right: 0;
+    color: #ffffff !important;
+    padding: 4px 10px 4px 10px;
+}
+#pos .main-body .bottom-cart-main-detilas {
+position: unset;}
+#pos .main-body .pickup-main-div{margin-top:30px !important;}
+/* #pos .main-body .common-all-btns{justify-content: center;} */
+#pos .main-body .responsive-ul-set{padding: 8px;}
+.modal .modal-lg{width:500px;}
+.di-flex{display: flex;}
+}
+@media only screen and (min-width: 1200px){
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px)
+ {#pos .main-body .common-icone-counter {
+    color: #436F8F;
+    font-size: 18px;
+}
+#pos .main-body .costom-common-btn {
+    
+    padding: 7px 2px 2px 7px;
+   
+}
+#pos .main-body .delete-btn {
+   
+    margin: 8px 0px 0px 24px;
+    
+}
+#pos .main-body .responsive-ul-set{justify-content: center;}
+#pos .main-body .border-product-cs {
+    
+    margin-bottom: 20px;
+}
+#pos .main-body .common-div-product h3 {
+font-size: 16px;}
+#pos .main-body .product-title h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+}
+#pos .main-body .product-set {
+    height: 110px;
+    margin-left: 12px;
+}
+#pos .main-body .price-lable {
+   background-color: #5E98C2;
+    border-radius: 100%;
+    padding: 10px 4px 4px 2px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+#pos .main-body .bottom-cart-main-detilas {
+    position: unset;
+    /* top: 0; */
+    bottom: 0px;
+    padding-bottom: 50px;
+}
+#pos .main-body .bottom-all-btns-main .custom-btn {
+ font-size: 16px;
+    margin-right: 12px;
+}
+#pos .main-body .bottom-all-btns-main .schedule-custom {
+    padding: 6px 12px 6px 16px;
+}
+#pos .main-body .bottom-all-btns-main .pay-custom {
+    padding: 6px 16px 6px 16px;
+   
+}
+#pos .main-body .bottom-all-btns-main .print-custom {
+    padding: 6px 28px 6px 28px;
+}
+}
